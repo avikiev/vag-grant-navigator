@@ -1,4 +1,4 @@
-﻿name: UTGA Grant Watch
+name: UTGA Grant Watch
 
 on:
   workflow_dispatch:
@@ -44,7 +44,7 @@ jobs:
       - name: Run Grant Watcher
         env:
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
-        run: python eu_grants_watch.py
+        run: python eu_grants_watch.py --debug
 
       - name: Evidence Gate + merge
         run: node scripts/merge-grants.mjs data/grant-inbox.json
