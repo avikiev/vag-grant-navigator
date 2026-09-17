@@ -106,11 +106,9 @@ class Candidate:
 def scrape_url(url: str, wait_for: int = 5000) -> str:
     result = app.scrape_url(
         url,
-        params={
-            "formats": ["markdown"],
-            "onlyMainContent": True,
-            "waitFor": wait_for,
-        },
+        formats=["markdown"],
+        only_main_content=True,
+        wait_for=wait_for,
     )
     if isinstance(result, dict):
         return result.get("markdown", "") or ""
