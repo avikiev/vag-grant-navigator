@@ -1,35 +1,5 @@
 [
   {
-    "id": "heritage-hub",
-    "title": "Small Grants Scheme for Cultural Heritage",
-    "organisation": "European Heritage Hub",
-    "deadline": null,
-    "deadlineLabel": "Подано 6 вересня · очікує розгляду",
-    "topics": [
-      "Культура",
-      "Туризм",
-      "Освіта"
-    ],
-    "amount": "до €25 000",
-    "applicant": "Українські організації громадянського суспільства",
-    "summary": "Заявку «Memory Routes of Kyiv Region: Community-led Documentation and Inclusive Interpretation» успішно подано; очікується review.",
-    "url": "https://www.europeanheritagehub.eu/funding/call-for-applications-small-grants-scheme-for-heritage-related-projects-led-by-civil-society-in-eu-candidate-and-neighbouring-countries/",
-    "score": 8,
-    "decision": "SUBMITTED",
-    "idea": "Memory Routes of Kyiv Region: Community-led Documentation and Inclusive Interpretation",
-    "owner": "Яніна Гаврилова / В’ячеслав Арещенко",
-    "internalDeadline": "—",
-    "nextAction": "Очікувати результат розгляду та оперативно відповідати на можливі запити European Heritage Hub",
-    "risk": "Не пропустити листи щодо уточнень, eligibility або наступного етапу",
-    "fit": [
-      2,
-      2,
-      1,
-      2,
-      2
-    ]
-  },
-  {
     "id": "eit-cpd",
     "title": "Skills-based CPD Courses",
     "organisation": "EIT Culture & Creativity",
@@ -59,6 +29,34 @@
     ]
   },
   {
+    "id": "uyf-institutional",
+    "title": "Інституційна підтримка молодіжних та дитячих громадських об’єднань",
+    "organisation": "Український молодіжний фонд",
+    "deadline": "2026-09-23T12:00:00+03:00",
+    "deadlineLabel": "23 вересня · 12:00 Київ",
+    "topics": [
+      "Освіта"
+    ],
+    "amount": "до 1 000 000 грн",
+    "applicant": "Молодіжні та дитячі громадські об’єднання; eligibility ВАГ треба підтвердити",
+    "summary": "Інституційний розвиток, фінансова сталість, якість молодіжної роботи та посилення організаційної спроможності.",
+    "url": "https://uyf.gov.ua/programs/nadannia-instytutsiinoi-pidtrymky",
+    "score": 6,
+    "decision": "PREPARE",
+    "idea": "Інституційний розвиток ВАГ: цифрові інструменти, спроможність, членство та партнерства",
+    "owner": "Яніна Гаврилова",
+    "internalDeadline": "10 вересня · eligibility check",
+    "nextAction": "Перевірити чинний Статут ВАГ і юридичну відповідність вимогам конкурсу до підготовки заявки",
+    "risk": "ВАГ може не відповідати вузькій вимозі щодо статусу молодіжного/дитячого громадського об’єднання",
+    "fit": [
+      2,
+      0,
+      2,
+      1,
+      1
+    ]
+  },
+  {
     "id": "town-twinning",
     "title": "Town Twinning 2026",
     "organisation": "CERV · European Commission",
@@ -84,34 +82,6 @@
       2,
       1,
       1,
-      1,
-      1
-    ]
-  },
-  {
-    "id": "uyf-institutional",
-    "title": "Інституційна підтримка молодіжних та дитячих громадських об’єднань",
-    "organisation": "Український молодіжний фонд",
-    "deadline": "2026-09-23T12:00:00+03:00",
-    "deadlineLabel": "23 вересня · 12:00 Київ",
-    "topics": [
-      "Освіта"
-    ],
-    "amount": "до 1 000 000 грн",
-    "applicant": "Молодіжні та дитячі громадські об’єднання; eligibility ВАГ треба підтвердити",
-    "summary": "Інституційний розвиток, фінансова сталість, якість молодіжної роботи та посилення організаційної спроможності.",
-    "url": "https://uyf.gov.ua/programs/nadannia-instytutsiinoi-pidtrymky",
-    "score": 6,
-    "decision": "PREPARE",
-    "idea": "Інституційний розвиток ВАГ: цифрові інструменти, спроможність, членство та партнерства",
-    "owner": "Яніна Гаврилова",
-    "internalDeadline": "10 вересня · eligibility check",
-    "nextAction": "Перевірити чинний Статут ВАГ і юридичну відповідність вимогам конкурсу до підготовки заявки",
-    "risk": "ВАГ може не відповідати вузькій вимозі щодо статусу молодіжного/дитячого громадського об’єднання",
-    "fit": [
-      2,
-      0,
-      2,
       1,
       1
     ]
@@ -263,6 +233,65 @@
     ]
   },
   {
+    "id": "heritage-hub",
+    "title": "Small Grants Scheme for Cultural Heritage",
+    "organisation": "European Heritage Hub",
+    "deadline": null,
+    "deadlineLabel": "Подано 6 вересня · очікує розгляду",
+    "topics": [
+      "Культура",
+      "Туризм",
+      "Освіта"
+    ],
+    "amount": "до €25 000",
+    "applicant": "Українські організації громадянського суспільства",
+    "summary": "Заявку «Memory Routes of Kyiv Region: Community-led Documentation and Inclusive Interpretation» успішно подано; очікується review.",
+    "url": "https://www.europeanheritagehub.eu/funding/call-for-applications-small-grants-scheme-for-heritage-related-projects-led-by-civil-society-in-eu-candidate-and-neighbouring-countries/",
+    "score": 8,
+    "decision": "SUBMITTED",
+    "idea": "Memory Routes of Kyiv Region: Community-led Documentation and Inclusive Interpretation",
+    "owner": "Яніна Гаврилова / В’ячеслав Арещенко",
+    "internalDeadline": "—",
+    "nextAction": "Очікувати результат розгляду та оперативно відповідати на можливі запити European Heritage Hub",
+    "risk": "Не пропустити листи щодо уточнень, eligibility або наступного етапу",
+    "fit": [
+      2,
+      2,
+      1,
+      2,
+      2
+    ]
+  },
+  {
+    "id": "cove-next",
+    "title": "Centres of Vocational Excellence",
+    "organisation": "Erasmus+ · наступний цикл",
+    "deadline": null,
+    "deadlineLabel": "Підготовка до нового раунду",
+    "topics": [
+      "Освіта",
+      "Туризм"
+    ],
+    "amount": "великий консорціумний грант",
+    "applicant": "Міжнародний консорціум VET, бізнесу та професійних партнерів",
+    "summary": "Міжнародна екосистема професійної досконалості, кваліфікацій, навчання й визнання навичок.",
+    "url": "https://erasmus-plus.ec.europa.eu/programme-guide/part-b/key-action-2/centres-of-vocational-excellence",
+    "score": 8,
+    "decision": "PREPARE",
+    "idea": "European Centre of Excellence for Tourist Guiding and Heritage Interpretation",
+    "owner": "Яніна Гаврилова",
+    "internalDeadline": "грудень 2026",
+    "nextAction": "Сформувати концепцію та карту VET/університетських партнерів до відкриття раунду",
+    "risk": "Потрібні сильний координатор і довготривала підготовка консорціуму",
+    "fit": [
+      2,
+      1,
+      1,
+      2,
+      2
+    ]
+  },
+  {
     "id": "eed",
     "title": "Flexible Support",
     "organisation": "European Endowment for Democracy",
@@ -319,35 +348,6 @@
       0,
       1,
       0
-    ]
-  },
-  {
-    "id": "cove-next",
-    "title": "Centres of Vocational Excellence",
-    "organisation": "Erasmus+ · наступний цикл",
-    "deadline": null,
-    "deadlineLabel": "Підготовка до нового раунду",
-    "topics": [
-      "Освіта",
-      "Туризм"
-    ],
-    "amount": "великий консорціумний грант",
-    "applicant": "Міжнародний консорціум VET, бізнесу та професійних партнерів",
-    "summary": "Міжнародна екосистема професійної досконалості, кваліфікацій, навчання й визнання навичок.",
-    "url": "https://erasmus-plus.ec.europa.eu/programme-guide/part-b/key-action-2/centres-of-vocational-excellence",
-    "score": 8,
-    "decision": "PREPARE",
-    "idea": "European Centre of Excellence for Tourist Guiding and Heritage Interpretation",
-    "owner": "Яніна Гаврилова",
-    "internalDeadline": "грудень 2026",
-    "nextAction": "Сформувати концепцію та карту VET/університетських партнерів до відкриття раунду",
-    "risk": "Потрібні сильний координатор і довготривала підготовка консорціуму",
-    "fit": [
-      2,
-      1,
-      1,
-      2,
-      2
     ]
   }
 ]
