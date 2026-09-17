@@ -44,14 +44,8 @@ jobs:
       - name: Run Grant Watcher
         env:
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
-        run: python eu_grants_watch.py --debug
+        run: python eu_grants_watch.py
 
-      - name: Upload discovery debug
-        uses: actions/upload-artifact@v4
-        with:
-          name: grant-discovery-debug
-          path: data/debug_output.md
-          retention-days: 1
       - name: Evidence Gate + merge
         run: node scripts/merge-grants.mjs data/grant-inbox.json
 
