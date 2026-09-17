@@ -1,0 +1,353 @@
+[
+  {
+    "id": "heritage-hub",
+    "title": "Small Grants Scheme for Cultural Heritage",
+    "organisation": "European Heritage Hub",
+    "deadline": null,
+    "deadlineLabel": "Подано 6 вересня · очікує розгляду",
+    "topics": [
+      "Культура",
+      "Туризм",
+      "Освіта"
+    ],
+    "amount": "до €25 000",
+    "applicant": "Українські організації громадянського суспільства",
+    "summary": "Заявку «Memory Routes of Kyiv Region: Community-led Documentation and Inclusive Interpretation» успішно подано; очікується review.",
+    "url": "https://www.europeanheritagehub.eu/funding/call-for-applications-small-grants-scheme-for-heritage-related-projects-led-by-civil-society-in-eu-candidate-and-neighbouring-countries/",
+    "score": 8,
+    "decision": "SUBMITTED",
+    "idea": "Memory Routes of Kyiv Region: Community-led Documentation and Inclusive Interpretation",
+    "owner": "Яніна Гаврилова / В’ячеслав Арещенко",
+    "internalDeadline": "—",
+    "nextAction": "Очікувати результат розгляду та оперативно відповідати на можливі запити European Heritage Hub",
+    "risk": "Не пропустити листи щодо уточнень, eligibility або наступного етапу",
+    "fit": [
+      2,
+      2,
+      1,
+      2,
+      2
+    ]
+  },
+  {
+    "id": "eit-cpd",
+    "title": "Skills-based CPD Courses",
+    "organisation": "EIT Culture & Creativity",
+    "deadline": "2026-09-14T17:00:00+02:00",
+    "deadlineLabel": "14 вересня · 17:00 CEST",
+    "topics": [
+      "Освіта",
+      "Культура"
+    ],
+    "amount": "до €75 000 · 75%",
+    "applicant": "Освітній координатор; консорціум до 3 учасників",
+    "summary": "Практичні англомовні CPD-курси для аудіовізуального сектору: AI, IP або digital storytelling.",
+    "url": "https://eit-culture-creativity.eu/your-opportunities/calls-funding/skills-based-cpd-courses",
+    "score": 8,
+    "decision": "PARTNER",
+    "idea": "Digital storytelling для інтерпретації спадщини та маршрутів пам’яті",
+    "owner": "В’ячеслав Арещенко",
+    "internalDeadline": "9 вересня · 18:00 EEST",
+    "nextAction": "Підтвердити акредитованого освітнього координатора та AV-партнера",
+    "risk": "ВАГ не може бути одноосібним заявником без статусу акредитованого провайдера",
+    "fit": [
+      2,
+      1,
+      2,
+      2,
+      1
+    ]
+  },
+  {
+    "id": "town-twinning",
+    "title": "Town Twinning 2026",
+    "organisation": "CERV · European Commission",
+    "deadline": "2026-09-23T17:00:00+02:00",
+    "deadlineLabel": "23 вересня · 17:00 CEST",
+    "topics": [
+      "Культура",
+      "Туризм",
+      "Освіта"
+    ],
+    "amount": "lump sum",
+    "applicant": "Муніципалітети та неприбуткові партнери",
+    "summary": "Співпраця громад, європейська пам’ять, культурне різноманіття та громадянська участь.",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/calls-for-proposals?callIdentifier=CERV-2026-CITIZENS-TOWN-TT",
+    "score": 6,
+    "decision": "PARTNER",
+    "idea": "Міста пам’яті й гостинності: Київщина та європейська громада",
+    "owner": "Яніна Гаврилова",
+    "internalDeadline": "10 вересня",
+    "nextAction": "Визначити український муніципалітет і підтвердити європейське місто-партнера",
+    "risk": "Без муніципального лідерства заявка нереалістична",
+    "fit": [
+      2,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "uyf-institutional",
+    "title": "Інституційна підтримка молодіжних та дитячих громадських об’єднань",
+    "organisation": "Український молодіжний фонд",
+    "deadline": "2026-09-23T12:00:00+03:00",
+    "deadlineLabel": "23 вересня · 12:00 Київ",
+    "topics": [
+      "Освіта"
+    ],
+    "amount": "до 1 000 000 грн",
+    "applicant": "Молодіжні та дитячі громадські об’єднання; eligibility ВАГ треба підтвердити",
+    "summary": "Інституційний розвиток, фінансова сталість, якість молодіжної роботи та посилення організаційної спроможності.",
+    "url": "https://uyf.gov.ua/programs/nadannia-instytutsiinoi-pidtrymky",
+    "score": 6,
+    "decision": "PREPARE",
+    "idea": "Інституційний розвиток ВАГ: цифрові інструменти, спроможність, членство та партнерства",
+    "owner": "Яніна Гаврилова",
+    "internalDeadline": "10 вересня · eligibility check",
+    "nextAction": "Перевірити чинний Статут ВАГ і юридичну відповідність вимогам конкурсу до підготовки заявки",
+    "risk": "ВАГ може не відповідати вузькій вимозі щодо статусу молодіжного/дитячого громадського об’єднання",
+    "fit": [
+      2,
+      0,
+      2,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "visegrad-plus",
+    "title": "Visegrad+ Grants",
+    "organisation": "International Visegrad Fund",
+    "deadline": "2026-10-01T12:00:00+02:00",
+    "deadlineLabel": "1 жовтня · 12:00 CEST",
+    "topics": [
+      "Культура",
+      "Освіта",
+      "Туризм"
+    ],
+    "amount": "типово €25–35 тис.",
+    "applicant": "Українська організація + партнери V4",
+    "summary": "Транскордонні проєкти у культурі, освіті, розвитку спроможності та демократичній трансформації.",
+    "url": "https://www.visegradfund.org/visegrad-plus-grants-apply",
+    "score": 8,
+    "decision": "GO",
+    "idea": "Князівський бенкет: гастрономічна дипломатія України та Словаччини",
+    "owner": "Яніна Гаврилова",
+    "internalDeadline": "18 вересня",
+    "nextAction": "Підтвердити словацького партнера та залучити ще одну організацію з V4",
+    "risk": "Потрібна переконлива регіональна користь, не лише двостороння подія",
+    "fit": [
+      2,
+      2,
+      1,
+      1,
+      2
+    ]
+  },
+  {
+    "id": "memory-action",
+    "title": "Memory in Action — Project Grants",
+    "organisation": "Culture Helps Solidarity",
+    "deadline": "2026-10-06T14:00:00+03:00",
+    "deadlineLabel": "6 жовтня",
+    "topics": [
+      "Культура",
+      "Освіта",
+      "Туризм"
+    ],
+    "amount": "до €7 000",
+    "applicant": "Культурні та громадські організації й ініціативи",
+    "summary": "Відповідальна робота з пам’яттю, документуванням і досвідом людей, яких торкнулася війна.",
+    "url": "https://culturehelpssolidarity.eu/project-grants/",
+    "score": 10,
+    "decision": "GO",
+    "idea": "Маршрути пам’яті Київщини: голоси громад і етичне вшанування",
+    "owner": "Яніна Гаврилова",
+    "internalDeadline": "25 вересня",
+    "nextAction": "Зафіксувати одну громаду, цільову групу та конкретний культурний результат",
+    "risk": "Не перетворити культурний проєкт на туристичний тур або терапевтичну послугу",
+    "fit": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  {
+    "id": "eit-shape-scale",
+    "title": "Shape & Scale for creative tech",
+    "organisation": "EIT Culture & Creativity",
+    "deadline": "2026-10-12T17:00:00+02:00",
+    "deadlineLabel": "12 жовтня · 17:00 CEST",
+    "topics": [
+      "Культура",
+      "Освіта"
+    ],
+    "amount": "до €100 000 / €500 000",
+    "applicant": "Прибуткові creative-tech компанії",
+    "summary": "Фінансування й акселерація компаній в архітектурі, аудіовізуальних медіа та моді.",
+    "url": "https://eit-culture-creativity.eu/latest-news/2026-08-07-eit-culture-creativity-opens-eur86m-funding-and-growth-programmes-accelerate",
+    "score": 3,
+    "decision": "NO-GO",
+    "idea": "Окремий комерційний spin-off EIP — лише після валідації моделі",
+    "owner": "—",
+    "internalDeadline": "—",
+    "nextAction": "Не витрачати ресурс ВАГ у цьому раунді",
+    "risk": "ВАГ не є прибутковою creative-tech компанією; спадщина не у фокусі 2026",
+    "fit": [
+      1,
+      0,
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "collaboration-grants",
+    "title": "Collaboration Grants — другий раунд",
+    "organisation": "Culture Helps Solidarity",
+    "deadline": "2026-11-10T14:00:00+02:00",
+    "deadlineLabel": "10 листопада · 14:00 Київ",
+    "topics": [
+      "Культура",
+      "Освіта"
+    ],
+    "amount": "до €20 000 / €30 000",
+    "applicant": "Українська організація + партнер із Creative Europe",
+    "summary": "Міжнародні культурні проєкти для інтеграції, ментального добробуту, вразливих груп і ветеранів.",
+    "url": "https://culturehelpssolidarity.eu/collaboration-grants/",
+    "score": 9,
+    "decision": "PARTNER",
+    "idea": "Інклюзивні маршрути й культурне відновлення ветеранів через міжнародний обмін",
+    "owner": "Яніна Гаврилова",
+    "internalDeadline": "20 жовтня",
+    "nextAction": "Взяти участь у matchmaking 15 вересня та узгодити європейського партнера",
+    "risk": "Проєкт має бути культурним і транскордонним, а не лише навчальним",
+    "fit": [
+      2,
+      2,
+      1,
+      2,
+      2
+    ]
+  },
+  {
+    "id": "zmina-showcasing",
+    "title": "ZMINA:Resilience — International Showcasing",
+    "organisation": "IZOLYATSIA / ZMINA:Resilience",
+    "deadline": "2026-12-14T23:59:00+02:00",
+    "deadlineLabel": "14 грудня · 23:59 Київ",
+    "topics": [
+      "Культура"
+    ],
+    "amount": "до €50 000 · до 90%",
+    "applicant": "Щонайменше 2 організації з 2 країн Creative Europe; одна — Україна",
+    "summary": "Міжнародне поширення вже створених у співпраці культурних робіт про стійкість; мінімум 6 публічних показів у щонайменше 2 країнах.",
+    "url": "https://platform.izolyatsia.org/ua/contest/zmina-resilience-showcasing-1",
+    "score": 7,
+    "decision": "PARTNER",
+    "idea": "Міжнародне поширення спільно створеного культурного продукту ВАГ про пам’ять, стійкість та інтерпретацію спадщини",
+    "owner": "Яніна Гаврилова",
+    "internalDeadline": "31 жовтня · go/no-go",
+    "nextAction": "Визначити наявний co-created cultural work і підтвердити міжнародного партнера; цілитися в раунд 14 грудня",
+    "risk": "Конкурс фінансує showcasing уже спільно створених робіт, а не створення нового продукту з нуля; потрібен 10% грошовий внесок",
+    "fit": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "eed",
+    "title": "Flexible Support",
+    "organisation": "European Endowment for Democracy",
+    "deadline": null,
+    "deadlineLabel": "Постійний прийом",
+    "topics": [
+      "Культура",
+      "Освіта"
+    ],
+    "amount": "за потребами проєкту",
+    "applicant": "Організації, неформальні групи й активісти",
+    "summary": "Гнучка підтримка ініціатив із чітким демократичним, правозахисним або адвокаційним результатом.",
+    "url": "https://democracyendowment.eu/support",
+    "score": 5,
+    "decision": "MONITOR",
+    "idea": "Професійне представництво гідів і доступ до культурної участі",
+    "owner": "—",
+    "internalDeadline": "—",
+    "nextAction": "Повертатися лише під сильний адвокаційний проєкт",
+    "risk": "Звичайна культурна або освітня діяльність не відповідає мандату",
+    "fit": [
+      1,
+      2,
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "pollination",
+    "title": "Daily Seed Grants",
+    "organisation": "The Pollination Project",
+    "deadline": null,
+    "deadlineLabel": "Постійний прийом",
+    "topics": [
+      "Освіта",
+      "Культура",
+      "Туризм"
+    ],
+    "amount": "до $500",
+    "applicant": "Ранні волонтерські ініціативи без оплачуваного штату",
+    "summary": "Невелика стартова підтримка для нових волонтерських ініціатив із соціальним результатом.",
+    "url": "https://thepollinationproject.org/apply/",
+    "score": 2,
+    "decision": "NO-GO",
+    "idea": "Не відповідає організаційній моделі ВАГ",
+    "owner": "—",
+    "internalDeadline": "—",
+    "nextAction": "Не подаватися від ВАГ",
+    "risk": "Обмеження щодо оплачуваного штату та надто малий бюджет",
+    "fit": [
+      1,
+      0,
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "cove-next",
+    "title": "Centres of Vocational Excellence",
+    "organisation": "Erasmus+ · наступний цикл",
+    "deadline": null,
+    "deadlineLabel": "Підготовка до нового раунду",
+    "topics": [
+      "Освіта",
+      "Туризм"
+    ],
+    "amount": "великий консорціумний грант",
+    "applicant": "Міжнародний консорціум VET, бізнесу та професійних партнерів",
+    "summary": "Міжнародна екосистема професійної досконалості, кваліфікацій, навчання й визнання навичок.",
+    "url": "https://erasmus-plus.ec.europa.eu/programme-guide/part-b/key-action-2/centres-of-vocational-excellence",
+    "score": 8,
+    "decision": "PREPARE",
+    "idea": "European Centre of Excellence for Tourist Guiding and Heritage Interpretation",
+    "owner": "Яніна Гаврилова",
+    "internalDeadline": "грудень 2026",
+    "nextAction": "Сформувати концепцію та карту VET/університетських партнерів до відкриття раунду",
+    "risk": "Потрібні сильний координатор і довготривала підготовка консорціуму",
+    "fit": [
+      2,
+      1,
+      1,
+      2,
+      2
+    ]
+  }
+]

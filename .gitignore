@@ -1,0 +1,17 @@
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+
+# Generated Grant Navigator feed build output
+_site/
+public/grants.json
+public/catalogue-meta.json
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor noise
+.DS_Store
+Thumbs.db

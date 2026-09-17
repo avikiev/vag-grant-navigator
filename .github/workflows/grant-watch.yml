@@ -1,0 +1,85 @@
+﻿name: UTGA Grant Watch
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily. GitHub Actions cron is UTC.
+    - cron: "17 5 * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: grant-watch
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install watcher dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Grant Watcher
+        env:
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+        run: python eu_grants_watch.py
+
+      - name: Evidence Gate + merge
+        run: node scripts/merge-grants.mjs data/grant-inbox.json
+
+      - name: Show audit
+        run: |
+          echo "--- grant-watch-review.json ---"
+          cat data/grant-watch-review.json || true
+          echo "--- grant-import-audit.json ---"
+          cat data/grant-import-audit.json || true
+
+      - name: Commit catalogue changes
+        shell: bash
+        run: |
+          if git diff --quiet -- data/grants.json data/catalogue-meta.json data/grant-import-audit.json data/grant-watch-review.json data/grant-inbox.json; then
+            echo "No catalogue changes."
+          else
+            git config user.name "utga-grant-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add data/grants.json data/catalogue-meta.json data/grant-import-audit.json data/grant-watch-review.json data/grant-inbox.json
+            git commit -m "chore(grants): automated catalogue refresh"
+            git push
+          fi
+
+      - name: Build public JSON feed
+        run: node scripts/publish-feed.mjs
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload feed artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+      - name: Deploy feed
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,6 @@
+/* Optional additions to existing globals.css for Step 3 */
+.verified.feed-live span{background:#69d397}
+.verified.feed-loading span{background:#f0c95a}
+.verified.feed-fallback span,.verified.feed-error span{background:#d77b69}
+.data-source code{overflow-wrap:anywhere;font-size:11px}
+.data-source strong{font-weight:900}
