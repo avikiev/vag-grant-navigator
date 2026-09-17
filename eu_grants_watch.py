@@ -146,7 +146,12 @@ def discover_from_search_markdown(md: str, keyword: str) -> list[Candidate]:
             if not official_url(url):
                 continue
             # Ignore obvious navigation/static links.
-            if any(x in url.lower() for x in ("/about", "/support", "/manual", "privacy", "cookies")):
+            url_lower = url.lower()
+            if any(x in url_lower for x in ("/about", "/support", "/manual", "privacy", "cookies")):
+                continue
+            if any(x in url_lower for x in ("#accept", "#refuse", "/assets/")):
+                continue
+            if urlparse(url).path.lower().endswith((".svg", ".png", ".jpg", ".jpeg", ".gif", ".webp", ".ico")):
                 continue
             key = (title, url)
             if key in seen:
