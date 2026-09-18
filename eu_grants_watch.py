@@ -807,6 +807,15 @@ def verify_candidate(c: Candidate) -> tuple[dict | None, dict]:
     source_ok = official_url(c.url)
     deadline_ok = bool(c.deadlines)
 
+    # Carried through to `record` below so merge-grants.mjs can perform
+    # identity resolution for SEDIA competitive calls (type=8), where a
+    # single `identifier` (e.g. CREA-CULT-2025-COOP-UA-2) is shared by
+    # several genuinely distinct calls. Empty string (not omitted) for
+    # type 1/2 topics, so downstream code can check truthiness without a
+    # missing-key branch.
+    callccm2_id = ""
+    reference = ""
+
     if result_type == "8":
         eligibility_ok, eligibility_reason, matched_excerpt = verify_ukraine_eligibility(text)
         applicant = (
@@ -872,6 +881,11 @@ def verify_candidate(c: Candidate) -> tuple[dict | None, dict]:
         "applicant": applicant,
         "summary": short_summary(text, c.title),
         "url": c.url,
+        # Present ONLY for SEDIA type=8 competitive calls (empty string for
+        # type 1/2 topics). This is what makes identity resolution in
+        # scripts/merge-grants.mjs possible -- see canonicalId() there.
+        "sediaCallccm2Id": callccm2_id,
+        "sediaReference": reference,
         "verification": {
             "officialSource": True,
             "eligibilityVerified": True,
