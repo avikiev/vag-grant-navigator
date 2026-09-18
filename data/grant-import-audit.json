@@ -1,17 +1,19 @@
 {
-  "runAt": "2026-09-18T14:15:37.081Z",
+  "runAt": "2026-09-18T15:27:41.689Z",
   "accepted": [
     {
-      "id": "second-call-for-proposals-for-project-grants-9ebddbdd",
-      "action": "added"
+      "id": "memory-action",
+      "action": "updated",
+      "generatedId": "second-call-for-proposals-for-project-grants-9ebddbdd"
     },
     {
-      "id": "culture-helps-solidarity-second-call-for-propo-688d4175",
-      "action": "added"
+      "id": "collaboration-grants",
+      "action": "updated",
+      "generatedId": "culture-helps-solidarity-second-call-for-propo-688d4175"
     },
     {
       "id": "cultural-horizons-artistic-debuts-b552a020",
-      "action": "added"
+      "action": "updated"
     }
   ],
   "rejected": []

@@ -148,7 +148,7 @@
       "officialSource": true,
       "eligibilityVerified": true,
       "deadlineVerified": true,
-      "verifiedAt": "2026-09-18T14:15:37.024973+00:00",
+      "verifiedAt": "2026-09-18T15:27:41.609926+00:00",
       "evidenceUrls": [
         "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/15241"
       ],
@@ -157,19 +157,18 @@
   },
   {
     "id": "memory-action",
-    "title": "Memory in Action — Project Grants",
-    "organisation": "Culture Helps Solidarity",
-    "deadline": "2026-10-06T14:00:00+03:00",
-    "deadlineLabel": "6 жовтня",
+    "title": "Second Call for Proposals for Project Grants",
+    "organisation": "Creative Europe · European Commission",
+    "deadline": "2026-10-06T13:00:00.000+0000",
+    "deadlineLabel": "06.10.2026 · 13:00 UTC",
     "topics": [
       "Культура",
-      "Освіта",
-      "Туризм"
+      "Освіта"
     ],
-    "amount": "до €7 000",
-    "applicant": "Культурні та громадські організації й ініціативи",
-    "summary": "Відповідальна робота з пам’яттю, документуванням і досвідом людей, яких торкнулася війна.",
-    "url": "https://culturehelpssolidarity.eu/project-grants/",
+    "amount": "до €7,000",
+    "applicant": "Партнерство за участю української юридичної/громадської організації — за офіційними умовами конкурсного дзвінка",
+    "summary": "[\"Fostering Ukrainians’ access to culture and cultural heritage\"] [] [\"<p><strong>Culture Helps Solidarity - Open Call for Project Grants</strong></p><p><strong>Memory in Action</strong></p><p><em>Support for projects in the fields of (tactical) commemoration, historical and artistic documentation, social and non-institutional archives as cultural heritage </em></p><p><strong>Second Round, August-October, 2026</strong></p><p><br></p><p><em>Culture Helps Solidarity</em> supports arts and culture professionals from Ukraine to sustain creativity, resilience, and community connection during and after the war.",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/15381",
     "score": 10,
     "decision": "GO",
     "idea": "Маршрути пам’яті Київщини: голоси громад і етичне вшанування",
@@ -183,7 +182,17 @@
       2,
       2,
       2
-    ]
+    ],
+    "sourceVerification": {
+      "officialSource": true,
+      "eligibilityVerified": true,
+      "deadlineVerified": true,
+      "verifiedAt": "2026-09-18T15:27:41.601305+00:00",
+      "evidenceUrls": [
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/15381"
+      ],
+      "method": "UTGA Grant Watcher v0.3 conservative SEDIA structured verification"
+    }
   },
   {
     "id": "eit-shape-scale",
@@ -216,18 +225,18 @@
   },
   {
     "id": "collaboration-grants",
-    "title": "Collaboration Grants — другий раунд",
-    "organisation": "Culture Helps Solidarity",
-    "deadline": "2026-11-10T14:00:00+02:00",
-    "deadlineLabel": "10 листопада · 14:00 Київ",
+    "title": "Culture Helps Solidarity - Second call for proposals for collaboration grants",
+    "organisation": "Creative Europe · European Commission",
+    "deadline": "2026-11-10T13:00:00.000+0000",
+    "deadlineLabel": "10.11.2026 · 13:00 UTC",
     "topics": [
       "Культура",
       "Освіта"
     ],
-    "amount": "до €20 000 / €30 000",
-    "applicant": "Українська організація + партнер із Creative Europe",
-    "summary": "Міжнародні культурні проєкти для інтеграції, ментального добробуту, вразливих груп і ветеранів.",
-    "url": "https://culturehelpssolidarity.eu/collaboration-grants/",
+    "amount": "до €20.000 / €30.000",
+    "applicant": "Партнерство за участю української юридичної/громадської організації — за офіційними умовами конкурсного дзвінка",
+    "summary": "[\"Fostering Ukrainians’ access to culture and cultural heritage\"] [] [\"<p><strong>Culture Helps Solodarity - Open Call for Collaboration grants</strong></p><p><strong>Second Round, September - November 2026</strong></p><p><em>Culture Helps Solidarity</em> supports arts and culture professionals from Ukraine to sustain creativity, resilience, and community connection during and after the war. Running until 2028, the project combines three grant schemes - individual grants, thematic project grants, and collaboration grants - with a rich programme of mentoring, learning, and peer exchange.",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/15523",
     "score": 9,
     "decision": "PARTNER",
     "idea": "Інклюзивні маршрути й культурне відновлення ветеранів через міжнародний обмін",
@@ -241,7 +250,17 @@
       1,
       2,
       2
-    ]
+    ],
+    "sourceVerification": {
+      "officialSource": true,
+      "eligibilityVerified": true,
+      "deadlineVerified": true,
+      "verifiedAt": "2026-09-18T15:27:41.608251+00:00",
+      "evidenceUrls": [
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/15523"
+      ],
+      "method": "UTGA Grant Watcher v0.3 conservative SEDIA structured verification"
+    }
   },
   {
     "id": "zmina-showcasing",
