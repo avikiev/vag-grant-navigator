@@ -1,0 +1,517 @@
+[
+  {
+    "identifier": "HORIZON-CL2-2027-01-HERITAGE-04",
+    "title": "Culture, heritage and creative industries for health and well-being",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2027-01-HERITAGE-04",
+    "deadline": "2027-09-23T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [],
+    "triage": "PARTNER-CANDIDATE",
+    "priority": "MEDIUM",
+    "triageReason": "Potential UTGA relevance: culture, creative industries. Eligibility and consortium role still require verification.",
+    "matchedTerms": [
+      "culture",
+      "creative industries"
+    ],
+    "topicBudget": {
+      "action": "HORIZON-CL2-2027-01-HERITAGE-04 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+      "expectedGrants": 4,
+      "minContribution": 3000000,
+      "maxContribution": 4000000,
+      "totalTopicBudget": 16000000,
+      "plannedOpeningDate": "2027-05-13",
+      "deadlineModel": "single-stage",
+      "deadlineDates": [
+        "2027-09-23"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "HORIZON-CL2-2027-01-HERITAGE-03",
+    "title": "Crafting routes to a circular economy",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2027-01-HERITAGE-03",
+    "deadline": "2027-09-23T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [],
+    "triage": "VERIFY",
+    "priority": "MEDIUM",
+    "triageReason": "Official source and deadline are available, but UTGA eligibility is not verified.",
+    "matchedTerms": [],
+    "topicBudget": {
+      "action": "HORIZON-CL2-2027-01-HERITAGE-03 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+      "expectedGrants": 3,
+      "minContribution": 3000000,
+      "maxContribution": 3500000,
+      "totalTopicBudget": 10500000,
+      "plannedOpeningDate": "2027-05-13",
+      "deadlineModel": "single-stage",
+      "deadlineDates": [
+        "2027-09-23"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "HORIZON-CL2-2027-01-HERITAGE-07",
+    "title": "Societal impact of cultural heritage",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2027-01-HERITAGE-07",
+    "deadline": "2027-09-23T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [],
+    "triage": "PARTNER-CANDIDATE",
+    "priority": "HIGH",
+    "triageReason": "Strong UTGA thematic match: cultural heritage. Eligibility and consortium role still require verification.",
+    "matchedTerms": [
+      "cultural heritage"
+    ],
+    "topicBudget": {
+      "action": "HORIZON-CL2-2027-01-HERITAGE-07 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+      "expectedGrants": 5,
+      "minContribution": 2500000,
+      "maxContribution": 3000000,
+      "totalTopicBudget": 15000000,
+      "plannedOpeningDate": "2027-05-13",
+      "deadlineModel": "single-stage",
+      "deadlineDates": [
+        "2027-09-23"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "HORIZON-CL2-2026-01-HERITAGE-03",
+    "title": "AI integration in CCSI work practice: catalysing innovation and competitiveness",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2026-01-HERITAGE-03",
+    "deadline": "2026-09-23T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [],
+    "triage": "VERIFY",
+    "priority": "MEDIUM",
+    "triageReason": "Official source and deadline are available, but UTGA eligibility is not verified.",
+    "matchedTerms": [],
+    "topicBudget": {
+      "action": "HORIZON-CL2-2026-01-HERITAGE-03 - HORIZON-IA HORIZON Innovation Actions",
+      "expectedGrants": 3,
+      "minContribution": 4000000,
+      "maxContribution": 5000000,
+      "totalTopicBudget": 15000000,
+      "plannedOpeningDate": "2026-05-12",
+      "deadlineModel": "single-stage",
+      "deadlineDates": [
+        "2026-09-23"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "HORIZON-CL2-2027-01-HERITAGE-06",
+    "title": "Future-proofing sustainable cultural tourism",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2027-01-HERITAGE-06",
+    "deadline": "2027-09-23T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [
+      "civil society"
+    ],
+    "triage": "PARTNER-CANDIDATE",
+    "priority": "HIGH",
+    "triageReason": "Strong UTGA thematic match: cultural tourism, tourism. Eligibility and consortium role still require verification.",
+    "matchedTerms": [
+      "cultural tourism",
+      "tourism"
+    ],
+    "topicBudget": {
+      "action": "HORIZON-CL2-2027-01-HERITAGE-06 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+      "expectedGrants": 3,
+      "minContribution": 4000000,
+      "maxContribution": 4800000,
+      "totalTopicBudget": 14500000,
+      "plannedOpeningDate": "2027-05-13",
+      "deadlineModel": "single-stage",
+      "deadlineDates": [
+        "2027-09-23"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "HORIZON-CL2-2027-02-HERITAGE-09-two-stage",
+    "title": "Open topic: Impact-driven research on realising the full potential of cultural heritage, arts and cultural and creative industries",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2027-02-HERITAGE-09-two-stage",
+    "deadline": "2027-05-04T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [],
+    "triage": "PARTNER-CANDIDATE",
+    "priority": "HIGH",
+    "triageReason": "Strong UTGA thematic match: cultural heritage. Eligibility and consortium role still require verification.",
+    "matchedTerms": [
+      "cultural heritage",
+      "creative industries"
+    ],
+    "topicBudget": {
+      "action": "HORIZON-CL2-2027-02-HERITAGE-09-two-stage - HORIZON-RIA HORIZON  Research and Innovation Actions",
+      "expectedGrants": 5,
+      "minContribution": 2000000,
+      "maxContribution": 4000000,
+      "totalTopicBudget": 20000000,
+      "plannedOpeningDate": "2027-03-02",
+      "deadlineModel": "two-stage",
+      "deadlineDates": [
+        "2027-05-04",
+        "2027-09-30"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "HORIZON-CL2-2026-01-HERITAGE-07",
+    "title": "Preventing and fighting illicit trafficking of cultural goods",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2026-01-HERITAGE-07",
+    "deadline": "2026-09-23T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [],
+    "triage": "VERIFY",
+    "priority": "MEDIUM",
+    "triageReason": "Official source and deadline are available, but UTGA eligibility is not verified.",
+    "matchedTerms": [],
+    "topicBudget": {
+      "action": "HORIZON-CL2-2026-01-HERITAGE-07 - HORIZON-CSA HORIZON Coordination and Support Actions",
+      "expectedGrants": 1,
+      "minContribution": 4500000,
+      "maxContribution": 5000000,
+      "totalTopicBudget": 5000000,
+      "plannedOpeningDate": "2026-05-12",
+      "deadlineModel": "single-stage",
+      "deadlineDates": [
+        "2026-09-23"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "HORIZON-NEB-2027-01-PARTICIPATION-02",
+    "title": "Intergenerational neighbourhoods and communities aligned with the New European Bauhaus",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2027-01-PARTICIPATION-02",
+    "deadline": "2027-12-01T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [
+      "ngo"
+    ],
+    "triage": "PARTNER-CANDIDATE",
+    "priority": "MEDIUM",
+    "triageReason": "Potential UTGA relevance: communities, ngo. Eligibility and consortium role still require verification.",
+    "matchedTerms": [
+      "communities"
+    ],
+    "topicBudget": {
+      "action": "HORIZON-NEB-2027-01-PARTICIPATION-02 - HORIZON-IA HORIZON Innovation Actions",
+      "expectedGrants": 2,
+      "minContribution": 5250000,
+      "maxContribution": 5250000,
+      "totalTopicBudget": 10500000,
+      "plannedOpeningDate": "2027-05-05",
+      "deadlineModel": "single-stage",
+      "deadlineDates": [
+        "2027-12-01"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "HORIZON-NEB-2027-01-PARTICIPATION-03",
+    "title": "Novel combinations of knowledge and research methods to address social issues and advance a fair green transition of neighbourhoods",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2027-01-PARTICIPATION-03",
+    "deadline": "2027-12-01T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [
+      "ngo"
+    ],
+    "triage": "VERIFY",
+    "priority": "MEDIUM",
+    "triageReason": "Official source and deadline are available, but UTGA eligibility is not verified.",
+    "matchedTerms": [],
+    "topicBudget": {
+      "action": "HORIZON-NEB-2027-01-PARTICIPATION-03 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+      "expectedGrants": 4,
+      "minContribution": 3500000,
+      "maxContribution": 3500000,
+      "totalTopicBudget": 14000000,
+      "plannedOpeningDate": "2027-05-05",
+      "deadlineModel": "single-stage",
+      "deadlineDates": [
+        "2027-12-01"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "HORIZON-NEB-2026-01-PARTICIPATION-03",
+    "title": "Understanding inhabitant’s experiences of neighbourhoods to support their health and well-being",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2026-01-PARTICIPATION-03",
+    "deadline": "2026-12-01T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [
+      "ngo"
+    ],
+    "triage": "VERIFY",
+    "priority": "MEDIUM",
+    "triageReason": "Official source and deadline are available, but UTGA eligibility is not verified.",
+    "matchedTerms": [],
+    "topicBudget": {
+      "action": "HORIZON-NEB-2026-01-PARTICIPATION-03 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+      "expectedGrants": 3,
+      "minContribution": 5000000,
+      "maxContribution": 5000000,
+      "totalTopicBudget": 15000000,
+      "plannedOpeningDate": "2026-05-05",
+      "deadlineModel": "single-stage",
+      "deadlineDates": [
+        "2026-12-01"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "HORIZON-CL2-2026-01-HERITAGE-06",
+    "title": "Safeguarding linguistic diversity in Europe",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2026-01-HERITAGE-06",
+    "deadline": "2026-09-23T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [],
+    "triage": "VERIFY",
+    "priority": "MEDIUM",
+    "triageReason": "Official source and deadline are available, but UTGA eligibility is not verified.",
+    "matchedTerms": [],
+    "topicBudget": {
+      "action": "HORIZON-CL2-2026-01-HERITAGE-06 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+      "expectedGrants": 2,
+      "minContribution": 5000000,
+      "maxContribution": 5750000,
+      "totalTopicBudget": 11500000,
+      "plannedOpeningDate": "2026-05-12",
+      "deadlineModel": "single-stage",
+      "deadlineDates": [
+        "2026-09-23"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "HORIZON-NEB-2027-01-PARTICIPATION-01",
+    "title": "The transformative potential of co-governance in the green transition of neighbourhoods",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2027-01-PARTICIPATION-01",
+    "deadline": "2027-12-01T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [
+      "ngo"
+    ],
+    "triage": "VERIFY",
+    "priority": "MEDIUM",
+    "triageReason": "Official source and deadline are available, but UTGA eligibility is not verified.",
+    "matchedTerms": [],
+    "topicBudget": {
+      "action": "HORIZON-NEB-2027-01-PARTICIPATION-01 - HORIZON-IA HORIZON Innovation Actions",
+      "expectedGrants": 2,
+      "minContribution": 5380000,
+      "maxContribution": 5380000,
+      "totalTopicBudget": 10760000,
+      "plannedOpeningDate": "2027-05-05",
+      "deadlineModel": "single-stage",
+      "deadlineDates": [
+        "2027-12-01"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "HORIZON-CL2-2026-01-HERITAGE-05",
+    "title": "Creative alliances: Fostering global partnerships in cultural policies and CCI innovation",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2026-01-HERITAGE-05",
+    "deadline": "2026-09-23T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [],
+    "triage": "VERIFY",
+    "priority": "MEDIUM",
+    "triageReason": "Official source and deadline are available, but UTGA eligibility is not verified.",
+    "matchedTerms": [],
+    "topicBudget": {
+      "action": "HORIZON-CL2-2026-01-HERITAGE-05 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+      "expectedGrants": 4,
+      "minContribution": 3000000,
+      "maxContribution": 3750000,
+      "totalTopicBudget": 15000000,
+      "plannedOpeningDate": "2026-05-12",
+      "deadlineModel": "single-stage",
+      "deadlineDates": [
+        "2026-09-23"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "HORIZON-NEB-2027-01-BUSINESS-01",
+    "title": "Mass customisation of offsite manufactured modular construction components to transform the existing built environment",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2027-01-BUSINESS-01",
+    "deadline": "2027-12-01T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [],
+    "triage": "REJECT",
+    "priority": "LOW",
+    "triageReason": "Low thematic relevance to UTGA detected: modular construction, construction components.",
+    "matchedTerms": [],
+    "topicBudget": {
+      "action": "HORIZON-NEB-2027-01-BUSINESS-01 - HORIZON-IA HORIZON Innovation Actions",
+      "expectedGrants": 2,
+      "minContribution": 5000000,
+      "maxContribution": 5000000,
+      "totalTopicBudget": 10000000,
+      "plannedOpeningDate": "2027-05-05",
+      "deadlineModel": "single-stage",
+      "deadlineDates": [
+        "2027-12-01"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "HORIZON-CL6-2027-01-BIODIV-04",
+    "title": "Living Labs for the eradication and/or management of invasive alien species",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL6-2027-01-BIODIV-04",
+    "deadline": "2027-09-22T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [
+      "civil society",
+      "ngo"
+    ],
+    "triage": "REJECT",
+    "priority": "LOW",
+    "triageReason": "Low thematic relevance to UTGA detected: invasive alien species.",
+    "matchedTerms": [],
+    "topicBudget": {
+      "action": "HORIZON-CL6-2027-01-BIODIV-04 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+      "expectedGrants": 3,
+      "minContribution": 8000000,
+      "maxContribution": 8000000,
+      "totalTopicBudget": 24000000,
+      "plannedOpeningDate": "2027-04-20",
+      "deadlineModel": "single-stage",
+      "deadlineDates": [
+        "2027-09-22"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "HORIZON-CL2-2027-01-HERITAGE-02",
+    "title": "AI4Creatives Support Platform: embracing a fair AI revolution",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2027-01-HERITAGE-02",
+    "deadline": "2027-09-23T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [],
+    "triage": "VERIFY",
+    "priority": "MEDIUM",
+    "triageReason": "Official source and deadline are available, but UTGA eligibility is not verified.",
+    "matchedTerms": [],
+    "topicBudget": {
+      "action": "HORIZON-CL2-2027-01-HERITAGE-02 - HORIZON-CSA HORIZON Coordination and Support Actions",
+      "expectedGrants": 1,
+      "minContribution": 4500000,
+      "maxContribution": 5000000,
+      "totalTopicBudget": 5000000,
+      "plannedOpeningDate": "2027-05-13",
+      "deadlineModel": "single-stage",
+      "deadlineDates": [
+        "2027-09-23"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "HORIZON-CL2-2027-01-HERITAGE-08",
+    "title": "Safeguarding & transmission of intangible cultural heritage",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2027-01-HERITAGE-08",
+    "deadline": "2027-09-23T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [],
+    "triage": "PARTNER-CANDIDATE",
+    "priority": "HIGH",
+    "triageReason": "Strong UTGA thematic match: intangible cultural heritage, cultural heritage. Eligibility and consortium role still require verification.",
+    "matchedTerms": [
+      "intangible cultural heritage",
+      "cultural heritage"
+    ],
+    "topicBudget": {
+      "action": "HORIZON-CL2-2027-01-HERITAGE-08 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+      "expectedGrants": 3,
+      "minContribution": 3000000,
+      "maxContribution": 4000000,
+      "totalTopicBudget": 12000000,
+      "plannedOpeningDate": "2027-05-13",
+      "deadlineModel": "single-stage",
+      "deadlineDates": [
+        "2027-09-23"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "CREA-CULT-2025-COOP-UA-2",
+    "title": "Cultural Horizons: Residencies",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/14828",
+    "deadline": "2026-09-30T18:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [],
+    "triage": "VERIFY",
+    "priority": "MEDIUM",
+    "triageReason": "Official source and deadline are available, but UTGA eligibility is not verified.",
+    "matchedTerms": [],
+    "topicBudget": null,
+    "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "HORIZON-MISS-2026-01-CLIMA-05",
+    "title": "Demonstrating solutions to protect and preserve cultural heritage from the impacts of climate change",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-01-CLIMA-05",
+    "deadline": "2026-09-23T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [],
+    "triage": "PARTNER-CANDIDATE",
+    "priority": "HIGH",
+    "triageReason": "Strong UTGA thematic match: cultural heritage. Eligibility and consortium role still require verification.",
+    "matchedTerms": [
+      "cultural heritage"
+    ],
+    "topicBudget": {
+      "action": "HORIZON-MISS-2026-01-CLIMA-05 - HORIZON-IA HORIZON Innovation Actions",
+      "expectedGrants": 3,
+      "minContribution": 7000000,
+      "maxContribution": 7000000,
+      "totalTopicBudget": 21000000,
+      "plannedOpeningDate": "2026-02-04",
+      "deadlineModel": "single-stage",
+      "deadlineDates": [
+        "2026-09-23"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  }
+]
