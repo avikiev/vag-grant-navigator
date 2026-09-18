@@ -1,5 +1,18 @@
 {
-  "runAt": "2026-09-18T11:42:14.596Z",
-  "accepted": [],
+  "runAt": "2026-09-18T14:15:37.081Z",
+  "accepted": [
+    {
+      "id": "second-call-for-proposals-for-project-grants-9ebddbdd",
+      "action": "added"
+    },
+    {
+      "id": "culture-helps-solidarity-second-call-for-propo-688d4175",
+      "action": "added"
+    },
+    {
+      "id": "cultural-horizons-artistic-debuts-b552a020",
+      "action": "added"
+    }
+  ],
   "rejected": []
 }
