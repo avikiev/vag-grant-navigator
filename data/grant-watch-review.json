@@ -2110,10 +2110,7 @@
     "identifier": "CREA-CULT-2025-COOP-UA-2",
     "status": "31094502",
     "deadlines": [
-      "2026-09-30T18:00:00.000+0000",
-      "2026-10-05T05:00:00.000+0000",
-      "2026-10-06T13:00:00.000+0000",
-      "2026-11-10T13:00:00.000+0000"
+      "2026-10-06T13:00:00.000+0000"
     ],
     "metadata": {
       "identifier": [
@@ -2180,10 +2177,244 @@
       "deadlineVerified": true,
       "eligibilitySignals": [],
       "deadlines": [
-        "2026-09-30T18:00:00.000+0000",
-        "2026-10-05T05:00:00.000+0000",
-        "2026-10-06T13:00:00.000+0000",
+        "2026-10-06T13:00:00.000+0000"
+      ],
+      "source": "European Commission SEDIA Search API"
+    }
+  },
+  {
+    "title": "Fostering Ukrainians’ access to culture and cultural heritage",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-CULT-2025-COOP-UA-2",
+    "keyword": "cultural heritage",
+    "identifier": "CREA-CULT-2025-COOP-UA-2",
+    "status": "31094502",
+    "deadlines": [
+      "2026-09-30T18:00:00.000+0000"
+    ],
+    "metadata": {
+      "identifier": [
+        "CREA-CULT-2025-COOP-UA-2"
+      ],
+      "es_ContentType": [
+        "text/plain"
+      ],
+      "caName": [
+        "Cultural Horizons: Residencies"
+      ],
+      "es_SortDate": [
+        "2026-06-30T00:00:00.000+0000"
+      ],
+      "deadlineDate": [
+        "2026-09-30T18:00:00.000+0000"
+      ],
+      "description": [],
+      "language": [
+        "en"
+      ],
+      "title": [
+        "Fostering Ukrainians’ access to culture and cultural heritage"
+      ],
+      "type": [
+        "8"
+      ],
+      "url": [
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/47365875"
+      ],
+      "esST_URL": [
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/47365875"
+      ],
+      "callccm2Id": [
+        "14828"
+      ],
+      "DATASOURCE": [
+        "SEDIA"
+      ],
+      "REFERENCE": [
+        "14828COMPETITIVE_CALLen"
+      ],
+      "frameworkProgramme": [
+        "43251814"
+      ],
+      "startDate": [
+        "2026-06-30T00:00:00.000+0000"
+      ],
+      "deadlineModel": [
+        "single-stage"
+      ],
+      "status": [
+        "31094502"
+      ]
+    },
+    "verification": {
+      "title": "Fostering Ukrainians’ access to culture and cultural heritage",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-CULT-2025-COOP-UA-2",
+      "identifier": "CREA-CULT-2025-COOP-UA-2",
+      "keyword": "cultural heritage",
+      "status": "31094502",
+      "officialSource": true,
+      "eligibilityVerified": false,
+      "deadlineVerified": true,
+      "eligibilitySignals": [],
+      "deadlines": [
+        "2026-09-30T18:00:00.000+0000"
+      ],
+      "source": "European Commission SEDIA Search API"
+    }
+  },
+  {
+    "title": "Fostering Ukrainians’ access to culture and cultural heritage",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-CULT-2025-COOP-UA-2",
+    "keyword": "cultural heritage",
+    "identifier": "CREA-CULT-2025-COOP-UA-2",
+    "status": "31094502",
+    "deadlines": [
+      "2026-11-10T13:00:00.000+0000"
+    ],
+    "metadata": {
+      "identifier": [
+        "CREA-CULT-2025-COOP-UA-2"
+      ],
+      "es_ContentType": [
+        "text/plain"
+      ],
+      "caName": [
+        "Culture Helps Solidarity - Second call for proposals for collaboration grants"
+      ],
+      "es_SortDate": [
+        "2026-09-01T00:00:00.000+0000"
+      ],
+      "deadlineDate": [
         "2026-11-10T13:00:00.000+0000"
+      ],
+      "description": [],
+      "language": [
+        "en"
+      ],
+      "title": [
+        "Fostering Ukrainians’ access to culture and cultural heritage"
+      ],
+      "type": [
+        "8"
+      ],
+      "url": [
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/47365875"
+      ],
+      "esST_URL": [
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/47365875"
+      ],
+      "callccm2Id": [
+        "15523"
+      ],
+      "DATASOURCE": [
+        "SEDIA"
+      ],
+      "REFERENCE": [
+        "15523COMPETITIVE_CALLen"
+      ],
+      "frameworkProgramme": [
+        "43251814"
+      ],
+      "startDate": [
+        "2026-09-01T00:00:00.000+0000"
+      ],
+      "deadlineModel": [
+        "single-stage"
+      ],
+      "status": [
+        "31094502"
+      ]
+    },
+    "verification": {
+      "title": "Fostering Ukrainians’ access to culture and cultural heritage",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-CULT-2025-COOP-UA-2",
+      "identifier": "CREA-CULT-2025-COOP-UA-2",
+      "keyword": "cultural heritage",
+      "status": "31094502",
+      "officialSource": true,
+      "eligibilityVerified": false,
+      "deadlineVerified": true,
+      "eligibilitySignals": [],
+      "deadlines": [
+        "2026-11-10T13:00:00.000+0000"
+      ],
+      "source": "European Commission SEDIA Search API"
+    }
+  },
+  {
+    "title": "Fostering Ukrainians’ access to culture and cultural heritage",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-CULT-2025-COOP-UA-2",
+    "keyword": "cultural heritage",
+    "identifier": "CREA-CULT-2025-COOP-UA-2",
+    "status": "31094502",
+    "deadlines": [
+      "2026-10-05T05:00:00.000+0000"
+    ],
+    "metadata": {
+      "identifier": [
+        "CREA-CULT-2025-COOP-UA-2"
+      ],
+      "es_ContentType": [
+        "text/plain"
+      ],
+      "caName": [
+        "Cultural Horizons: Artistic Debuts"
+      ],
+      "es_SortDate": [
+        "2026-08-03T00:00:00.000+0000"
+      ],
+      "deadlineDate": [
+        "2026-10-05T05:00:00.000+0000"
+      ],
+      "description": [],
+      "language": [
+        "en"
+      ],
+      "title": [
+        "Fostering Ukrainians’ access to culture and cultural heritage"
+      ],
+      "type": [
+        "8"
+      ],
+      "url": [
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/47365875"
+      ],
+      "esST_URL": [
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/47365875"
+      ],
+      "callccm2Id": [
+        "15241"
+      ],
+      "DATASOURCE": [
+        "SEDIA"
+      ],
+      "REFERENCE": [
+        "15241COMPETITIVE_CALLen"
+      ],
+      "frameworkProgramme": [
+        "43251814"
+      ],
+      "startDate": [
+        "2026-08-03T00:00:00.000+0000"
+      ],
+      "deadlineModel": [
+        "single-stage"
+      ],
+      "status": [
+        "31094502"
+      ]
+    },
+    "verification": {
+      "title": "Fostering Ukrainians’ access to culture and cultural heritage",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-CULT-2025-COOP-UA-2",
+      "identifier": "CREA-CULT-2025-COOP-UA-2",
+      "keyword": "cultural heritage",
+      "status": "31094502",
+      "officialSource": true,
+      "eligibilityVerified": false,
+      "deadlineVerified": true,
+      "eligibilitySignals": [],
+      "deadlines": [
+        "2026-10-05T05:00:00.000+0000"
       ],
       "source": "European Commission SEDIA Search API"
     }
