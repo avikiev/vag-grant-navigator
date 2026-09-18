@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import html
 import json
 import re
 import sys
@@ -52,6 +53,11 @@ SEARCH_API_URL_TEMPLATE = (
 TOPIC_URL_TEMPLATE = (
     "https://ec.europa.eu/info/funding-tenders/opportunities/portal/"
     "screen/opportunities/topic-details/{identifier}"
+)
+
+COMPETITIVE_CALL_URL_TEMPLATE = (
+    "https://ec.europa.eu/info/funding-tenders/opportunities/portal/"
+    "screen/opportunities/competitive-calls-cs/{callccm2_id}"
 )
 
 # Verified SEDIA status codes used by the Funding & Tenders Portal.
@@ -262,6 +268,8 @@ def search_sedia(keyword: str) -> list[dict]:
             "type",
             "typesOfAction",
             "description",
+            "beneficiaryAdministration",
+            "destinationDetails",
             "keywords",
             "tags",
             "topicConditions",
@@ -367,6 +375,15 @@ def candidate_from_result(item: dict, keyword: str) -> Candidate | None:
     title = str(first_value(metadata.get("title"))).strip()
     status = str(first_value(metadata.get("status"))).strip()
     datasource = str(first_value(metadata.get("DATASOURCE"))).strip()
+    result_type = str(first_value(metadata.get("type"))).strip()
+    callccm2_id = str(first_value(metadata.get("callccm2Id"))).strip()
+
+    if result_type == "8":
+        competitive_title = str(
+            first_value(metadata.get("caName"))
+        ).strip()
+        if competitive_title:
+            title = competitive_title
 
     if not identifier or not title:
         return None
@@ -381,7 +398,14 @@ def candidate_from_result(item: dict, keyword: str) -> Candidate | None:
     if not deadlines:
         return None
 
-    url = TOPIC_URL_TEMPLATE.format(identifier=identifier)
+    if result_type == "8":
+        if not callccm2_id:
+            return None
+        url = COMPETITIVE_CALL_URL_TEMPLATE.format(
+            callccm2_id=callccm2_id
+        )
+    else:
+        url = TOPIC_URL_TEMPLATE.format(identifier=identifier)
 
     if not official_url(url):
         return None
@@ -403,6 +427,8 @@ def metadata_text(metadata: dict) -> str:
     for key in (
         "title",
         "description",
+        "beneficiaryAdministration",
+        "destinationDetails",
         "keywords",
         "tags",
         "typesOfAction",
@@ -527,6 +553,164 @@ def infer_amount(metadata: dict, identifier: str) -> str:
     return "див. офіційні умови"
 
 
+# ---------------------------------------------------------------------------
+# 1. Conservative HTML -> text (stdlib only)
+# ---------------------------------------------------------------------------
+
+_BLOCK_TAG_RE = re.compile(
+    r"</?(?:p|br|li|ul|ol|div|h[1-6]|tr|table)\b[^>]*>", re.I
+)
+_ANY_TAG_RE = re.compile(r"<[^>]+>")
+_WS_RE = re.compile(r"[ \t]+")
+_NL_RE = re.compile(r"\n{2,}")
+
+
+def html_to_text(raw: str) -> str:
+    """Minimal, dependency-free HTML -> text normaliser."""
+    if not raw:
+        return ""
+    # Collapse ALL incidental source whitespace (including newlines used only
+    # for HTML source formatting/indentation) BEFORE inserting our own
+    # structural line breaks -- otherwise arbitrary line-wrapping in the raw
+    # markup fragments a single sentence across "\n" and breaks the
+    # no-newline-crossing eligibility regexes below.
+    text = re.sub(r"\s+", " ", raw)
+    text = html.unescape(text)
+    text = _BLOCK_TAG_RE.sub("\n", text)
+    text = _ANY_TAG_RE.sub(" ", text)
+    text = _WS_RE.sub(" ", text)
+    text = _NL_RE.sub("\n", text)
+    text = re.sub(r" *\n *", "\n", text)
+    return text.strip()
+
+
+# ---------------------------------------------------------------------------
+# 2. Isolate the Eligibility section only (operates on ALREADY-normalised text)
+# ---------------------------------------------------------------------------
+
+_ELIGIBILITY_HEADING_RE = re.compile(
+    r"\b(eligibility(?:\s+criteria)?|who\s+can\s+apply)\b", re.I
+)
+
+_NEXT_SECTION_RE = re.compile(
+    r"\b(grant\s+amount|budget\s+overview|overall\s+budget|total\s+budget|"
+    r"timeline|deadline|how\s+to\s+apply|application\s+process|duration|"
+    r"award\s+criteria|evaluation|further\s+information|contact|"
+    r"background|context|objectives?|description|about\s+the|programme|"
+    r"implementation|summary)\b",
+    re.I,
+)
+
+_MAX_ELIGIBILITY_WINDOW = 1500
+
+
+def extract_eligibility_section(plain_text: str) -> str | None:
+    """
+    plain_text MUST already be HTML-normalised (see html_to_text()).
+    Returns the text between an 'Eligibility' heading and the next known
+    section heading, or None if no eligibility heading is present at all.
+    """
+    m = _ELIGIBILITY_HEADING_RE.search(plain_text)
+    if not m:
+        return None
+    start = m.end()
+    tail = plain_text[start:start + 8000]
+    nxt = _NEXT_SECTION_RE.search(tail)
+    end = nxt.start() if nxt else _MAX_ELIGIBILITY_WINDOW
+    section = tail[:end].strip()
+    return section or None
+
+
+# ---------------------------------------------------------------------------
+# 3. Strict, explicit Ukraine-eligibility phrase matcher
+# ---------------------------------------------------------------------------
+
+_ENTITY_TERM = (
+    r"(?:legal\s+entit(?:y|ies)|legal\s+status|civic|civil\s+society|"
+    r"non-?profit|ngo|public\s+or\s+private\s+organi[sz]ation|"
+    r"organi[sz]ations?)"
+)
+_LOCATION_VERB = (
+    r"(?:based\s+in|established\s+in|registered\s+in|legal\s+status\s+in|"
+    r"active\s+in)"
+)
+
+_QUALIFY_A = re.compile(
+    _ENTITY_TERM + r"[^.\n]{0,60}" + _LOCATION_VERB + r"[^.\n]{0,20}ukrain",
+    re.I,
+)
+_QUALIFY_B = re.compile(
+    r"ukrain\w*[\s-]{0,3}(?:based|established|registered)[^.\n]{0,60}"
+    + _ENTITY_TERM,
+    re.I,
+)
+_EU_ONLY_RE = re.compile(
+    r"registered\s+within\s+the\s+eu|eu-based\s+(?:non-?profit|organi[sz]ation)",
+    re.I,
+)
+
+
+def verify_ukraine_eligibility(raw_metadata_text: str) -> tuple[bool, str, str | None]:
+    """
+    Conservative, fail-closed eligibility check for SEDIA type=8 competitive
+    calls. Accepts RAW (possibly HTML-tagged) metadata text -- normalisation
+    happens here, so callers cannot accidentally skip it.
+
+    Returns (verified, reason, matched_excerpt).
+    """
+    plain_text = html_to_text(raw_metadata_text)
+    section = extract_eligibility_section(plain_text)
+    if section is None:
+        return False, "no-eligibility-section-found", None
+
+    m = _QUALIFY_A.search(section) or _QUALIFY_B.search(section)
+    if m:
+        excerpt = re.sub(r"\s+", " ", m.group(0)).strip()[:200]
+        return True, "explicit-ukraine-entity-eligibility", excerpt
+
+    if _EU_ONLY_RE.search(section):
+        return False, "explicit-eu-only-eligibility", None
+
+    return False, "ambiguous-no-explicit-qualifying-phrase", None
+
+
+# ---------------------------------------------------------------------------
+# 4. Amount safety for competitive calls -- never publish total call budget
+# ---------------------------------------------------------------------------
+
+_UP_TO_AMOUNT_RE = re.compile(
+    r"up\s+to\s*(?:€|EUR)\s*(\d{1,3}(?:[.,]\d{3})+|\d+)", re.I
+)
+_TOTAL_BUDGET_CONTEXT_RE = re.compile(
+    r"(total|overall|call)\s+budget", re.I
+)
+
+
+def infer_amount_competitive_call(raw_metadata_text: str) -> str:
+    """
+    Conservative applicant-facing amount for SEDIA type=8. Accepts RAW
+    (possibly HTML-tagged) text -- normalisation happens here.
+    Never returns the total call budget.
+    """
+    plain_text = html_to_text(raw_metadata_text)
+
+    amounts: list[str] = []
+    for m in _UP_TO_AMOUNT_RE.finditer(plain_text):
+        window_start = max(0, m.start() - 40)
+        preceding = plain_text[window_start:m.start()]
+        if _TOTAL_BUDGET_CONTEXT_RE.search(preceding):
+            continue
+        value = m.group(1).strip()
+        label = f"€{value}"
+        if label not in amounts:
+            amounts.append(label)
+
+    if not amounts:
+        return "див. офіційні умови"
+    if len(amounts) > 3:
+        return "див. офіційні умови"
+    return "до " + " / ".join(amounts)
+
 def infer_applicant(text: str) -> tuple[str, bool, list[str]]:
     low = text.lower()
 
@@ -618,31 +802,63 @@ def deadline_label(value: str) -> str:
 
 def verify_candidate(c: Candidate) -> tuple[dict | None, dict]:
     text = metadata_text(c.metadata)
-
-    applicant, eligibility_ok, eligibility_hits = infer_applicant(text)
+    result_type = str(first_value(c.metadata.get("type"))).strip()
 
     source_ok = official_url(c.url)
     deadline_ok = bool(c.deadlines)
 
-    evidence = {
-        "title": c.title,
-        "url": c.url,
-        "identifier": c.identifier,
-        "keyword": c.keyword,
-        "status": c.status,
-        "officialSource": source_ok,
-        "eligibilityVerified": eligibility_ok,
-        "deadlineVerified": deadline_ok,
-        "eligibilitySignals": eligibility_hits,
-        "deadlines": c.deadlines,
-        "source": "European Commission SEDIA Search API",
-    }
+    if result_type == "8":
+        eligibility_ok, eligibility_reason, matched_excerpt = verify_ukraine_eligibility(text)
+        applicant = (
+            "Партнерство за участю української юридичної/громадської організації — "
+            "за офіційними умовами конкурсного дзвінка"
+            if eligibility_ok
+            else "Eligibility потребує ручної перевірки"
+        )
+        amount = infer_amount_competitive_call(text)
+        callccm2_id = str(first_value(c.metadata.get("callccm2Id"))).strip()
+        # SEDIA competitive-call reference, verified from the live payload.
+        reference = str(first_value(c.metadata.get("REFERENCE")) or "").strip()
+
+        evidence = {
+            "title": c.title,
+            "url": c.url,
+            "identifier": c.identifier,
+            "keyword": c.keyword,
+            "status": c.status,
+            "officialSource": source_ok,
+            "eligibilityVerified": eligibility_ok,
+            "deadlineVerified": deadline_ok,
+            "deadlines": c.deadlines,
+            "source": "European Commission SEDIA Search API",
+            "callccm2Id": callccm2_id,
+            "verificationMode": "competitive-call-eligibility-section",
+            "eligibilityReason": eligibility_reason,
+            "matchedEligibilityExcerpt": matched_excerpt,
+        }
+        if reference:
+            evidence["reference"] = reference
+    else:
+        applicant, eligibility_ok, eligibility_hits = infer_applicant(text)
+        amount = infer_amount(c.metadata, c.identifier)
+
+        evidence = {
+            "title": c.title,
+            "url": c.url,
+            "identifier": c.identifier,
+            "keyword": c.keyword,
+            "status": c.status,
+            "officialSource": source_ok,
+            "eligibilityVerified": eligibility_ok,
+            "deadlineVerified": deadline_ok,
+            "eligibilitySignals": eligibility_hits,
+            "deadlines": c.deadlines,
+            "source": "European Commission SEDIA Search API",
+        }
 
     if not (source_ok and eligibility_ok and deadline_ok):
         return None, evidence
 
-    # For multi-deadline topics we deliberately use the earliest future
-    # deadline. The complete list remains in verification evidence.
     deadline = c.deadlines[0]
 
     record = {
@@ -652,7 +868,7 @@ def verify_candidate(c: Candidate) -> tuple[dict | None, dict]:
         "deadline": deadline,
         "deadlineLabel": deadline_label(deadline),
         "topics": infer_topics(c.title + "\n" + text),
-        "amount": infer_amount(c.metadata, c.identifier),
+        "amount": amount,
         "applicant": applicant,
         "summary": short_summary(text, c.title),
         "url": c.url,
