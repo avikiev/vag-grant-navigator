@@ -673,13 +673,26 @@ def verify_candidate(c: Candidate) -> tuple[dict | None, dict]:
 
 
 def dedupe_candidates(candidates: Iterable[Candidate]) -> list[Candidate]:
-    by_identifier: dict[str, Candidate] = {}
+    by_key: dict[tuple[str, str], Candidate] = {}
 
     for candidate in candidates:
-        existing = by_identifier.get(candidate.identifier)
+        callccm2_id = str(
+            first_value(candidate.metadata.get("callccm2Id"))
+        ).strip()
+
+        reference = str(
+            first_value(candidate.metadata.get("REFERENCE"))
+        ).strip()
+
+        # SEDIA may reuse one identifier for several distinct competitive
+        # calls. Prefer callccm2Id, then REFERENCE, and only then identifier.
+        discriminator = callccm2_id or reference or candidate.identifier
+        key = (candidate.identifier, discriminator)
+
+        existing = by_key.get(key)
 
         if existing is None:
-            by_identifier[candidate.identifier] = candidate
+            by_key[key] = candidate
             continue
 
         merged_deadlines = sorted(
@@ -687,13 +700,14 @@ def dedupe_candidates(candidates: Iterable[Candidate]) -> list[Candidate]:
         )
         existing.deadlines = merged_deadlines
 
-        # Merge metadata conservatively so duplicate SEDIA search hits do not
-        # cause loss of potentially useful eligibility evidence.
-        for key, value in candidate.metadata.items():
-            if key not in existing.metadata or not existing.metadata[key]:
-                existing.metadata[key] = value
+        for metadata_key, value in candidate.metadata.items():
+            if (
+                metadata_key not in existing.metadata
+                or not existing.metadata[metadata_key]
+            ):
+                existing.metadata[metadata_key] = value
 
-    return list(by_identifier.values())
+    return list(by_key.values())
 
 
 def dedupe(records: Iterable[dict]) -> list[dict]:
