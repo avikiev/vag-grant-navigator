@@ -44,6 +44,9 @@ jobs:
       - name: Run Grant Watcher
         run: python eu_grants_watch.py
 
+      - name: Build Review Triage Queue
+        run: node scripts/triage-review.mjs
+
       - name: Evidence Gate + merge
         run: node scripts/merge-grants.mjs data/grant-inbox.json
 
