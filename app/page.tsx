@@ -390,7 +390,25 @@ type FeedMeta = {
   version?: number;
 };
 
-const DEFAULT_FEED_URL = process.env.NEXT_PUBLIC_GRANT_FEED_URL || "/grants.json";
+// Canonical, always-fresh public feed. GitHub Actions in this repository
+// commits data/*.json AND redeploys GitHub Pages from it on every
+// successful run, so this URL is the one source we can actually verify is
+// kept current (see .github/workflows/grant-watch.yml).
+//
+// We deliberately do NOT default to a same-origin "/grants.json" path.
+// This repository has no package.json / next.config.* / vercel.json, so
+// there is no visible build pipeline here that would bundle a static
+// public/grants.json for same-origin serving -- wherever/however this
+// page is actually built and hosted is outside this repository, and we
+// have no evidence about its rebuild cadence. Falling back to a same-
+// origin path would silently depend on that unknown process being fresh.
+//
+// process.env.* is only meaningful if a bundler defines it at build time;
+// guard against it being literally undefined (e.g. plain browser
+// evaluation with no build step), which would otherwise throw.
+const CANONICAL_FEED_URL = "https://avikiev.github.io/vag-grant-navigator/grants.json";
+const DEFAULT_FEED_URL =
+  (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_GRANT_FEED_URL) || CANONICAL_FEED_URL;
 const FEED_URL_STORAGE_KEY = "vag-grant-feed-url-v1";
 
 function validateGrantFeed(value: unknown): value is Grant[] {
@@ -411,6 +429,86 @@ function metaUrlFor(feedUrl: string) {
   return feedUrl.endsWith("grants.json")
     ? feedUrl.slice(0, -"grants.json".length) + "catalogue-meta.json"
     : null;
+}
+
+// --- Step 3.4: Review Queue (automated SEDIA triage, not a human decision) ---
+type Triage = "PARTNER-CANDIDATE" | "VERIFY" | "REJECT";
+type TopicBudget = {
+  action?: string;
+  expectedGrants?: number;
+  minContribution?: number;
+  maxContribution?: number;
+  totalTopicBudget?: number;
+  plannedOpeningDate?: string;
+  deadlineModel?: string;
+  deadlineDates?: string[];
+} | null;
+type ReviewRecord = {
+  identifier: string;
+  title: string;
+  url: string;
+  deadline: string | null;
+  officialSource?: boolean;
+  eligibilityVerified?: boolean;
+  eligibilitySignals?: string[];
+  triage: Triage;
+  priority?: string;
+  triageReason?: string;
+  matchedTerms?: string[];
+  topicBudget?: TopicBudget;
+  source?: string;
+};
+
+const triageLabels: Record<Triage, string> = {
+  "PARTNER-CANDIDATE": "Кандидат для партнерства",
+  VERIFY: "Потребує перевірки",
+  REJECT: "Відсіяно",
+};
+// Deliberately NOT "Партнер" for PARTNER-CANDIDATE -- that word is reserved
+// for the human PARTNER decision elsewhere in this dashboard, and reusing it
+// here would make an automated triage guess look like a management decision.
+const triageOrder: Record<Triage, number> = { "PARTNER-CANDIDATE": 0, VERIFY: 1, REJECT: 2 };
+
+function reviewUrlFor(feedUrl: string) {
+  return feedUrl.endsWith("grants.json")
+    ? feedUrl.slice(0, -"grants.json".length) + "grant-review-queue.json"
+    : null;
+}
+
+function validateReviewQueue(value: unknown): value is ReviewRecord[] {
+  if (!Array.isArray(value)) return false;
+  return value.every((r) => {
+    if (!r || typeof r !== "object") return false;
+    const x = r as Partial<ReviewRecord>;
+    return Boolean(x.identifier && x.title && typeof x.url === "string" && typeof x.triage === "string");
+  });
+}
+
+function formatEuro(n: number) {
+  return n >= 1_000_000
+    ? `€${(n / 1_000_000).toFixed(1).replace(/\.0$/, "")} млн`
+    : `€${n.toLocaleString("uk-UA")}`;
+}
+
+// Distinguishes the per-project applicant-facing figure from the total
+// topic budget. totalTopicBudget must NEVER be shown as if it were the
+// amount a single applicant/consortium could receive.
+function formatTopicBudget(budget: TopicBudget) {
+  if (!budget) return null;
+  const { minContribution: min, maxContribution: max, totalTopicBudget: total, expectedGrants } = budget;
+  let perProject: string | null = null;
+  if (typeof min === "number" && typeof max === "number") {
+    perProject = min === max ? `${formatEuro(min)} / проєкт` : `${formatEuro(min)}–${formatEuro(max)} / проєкт`;
+  } else if (typeof max === "number") {
+    perProject = `до ${formatEuro(max)} / проєкт`;
+  } else if (typeof min === "number") {
+    perProject = `від ${formatEuro(min)} / проєкт`;
+  }
+  return {
+    perProject,
+    totalLabel: typeof total === "number" ? formatEuro(total) : null,
+    expectedGrants: typeof expectedGrants === "number" ? expectedGrants : null,
+  };
 }
 
 function formatUpdatedAt(value?: string) {
@@ -445,15 +543,27 @@ export default function DecisionDashboard() {
   const [feedMeta, setFeedMeta] = useState<FeedMeta>({});
   const [feedStatus, setFeedStatus] = useState<"loading" | "live" | "fallback" | "error">("loading");
   const [feedUrl, setFeedUrl] = useState(DEFAULT_FEED_URL);
+  const [feedUrlOverridden, setFeedUrlOverridden] = useState(false);
+  const [reviewQueue, setReviewQueue] = useState<ReviewRecord[]>([]);
+  const [reviewFilter, setReviewFilter] = useState<Triage | "ALL">("ALL");
 
   useEffect(() => {
     try {
       const stored = localStorage.getItem("vag-grant-decisions-v1");
       if (stored) setOverrides(JSON.parse(stored));
       const storedFeed = localStorage.getItem(FEED_URL_STORAGE_KEY);
-      if (storedFeed) setFeedUrl(storedFeed);
+      if (storedFeed) {
+        setFeedUrl(storedFeed);
+        setFeedUrlOverridden(storedFeed !== CANONICAL_FEED_URL);
+      }
     } catch { /* device storage is optional */ }
   }, []);
+
+  const resetFeedUrlOverride = () => {
+    try { localStorage.removeItem(FEED_URL_STORAGE_KEY); } catch { /* optional */ }
+    setFeedUrlOverridden(false);
+    setFeedUrl(DEFAULT_FEED_URL);
+  };
 
   useEffect(() => {
     let cancelled = false;
@@ -476,6 +586,20 @@ export default function DecisionDashboard() {
             const metaResponse = await fetch(metaUrl, { cache: "no-store", headers: { Accept: "application/json" } });
             if (metaResponse.ok && !cancelled) setFeedMeta(await metaResponse.json());
           } catch { /* meta is optional */ }
+        }
+
+        // Review queue is best-effort: a run with zero review candidates,
+        // or an older deployed feed without this file yet, must not affect
+        // the main catalogue's "live" status.
+        const reviewUrl = reviewUrlFor(feedUrl);
+        if (reviewUrl) {
+          try {
+            const reviewResponse = await fetch(reviewUrl, { cache: "no-store", headers: { Accept: "application/json" } });
+            if (reviewResponse.ok && !cancelled) {
+              const reviewPayload: unknown = await reviewResponse.json();
+              if (validateReviewQueue(reviewPayload)) setReviewQueue(reviewPayload);
+            }
+          } catch { /* review queue is optional */ }
         }
       } catch (error) {
         if (cancelled) return;
@@ -537,6 +661,18 @@ export default function DecisionDashboard() {
     window.setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "center" }), 20);
   };
 
+  const reviewCounts = reviewQueue.reduce(
+    (result, record) => ({ ...result, [record.triage]: (result[record.triage] ?? 0) + 1 }),
+    {} as Record<Triage, number>,
+  );
+  const visibleReview = useMemo(
+    () =>
+      reviewQueue
+        .filter((record) => reviewFilter === "ALL" || record.triage === reviewFilter)
+        .sort((a, b) => triageOrder[a.triage] - triageOrder[b.triage]),
+    [reviewQueue, reviewFilter],
+  );
+
   return (
     <main>
       <header className="app-header">
@@ -589,6 +725,13 @@ export default function DecisionDashboard() {
             <summary>Джерело автоматичного каталогу</summary>
             <p>Статус: <strong>{feedStatus === "live" ? "LIVE" : feedStatus === "loading" ? "оновлення…" : "fallback"}</strong>. Feed: <code>{feedUrl}</code></p>
             <p>Каталог перевіряється при відкритті сторінки та кожні 15 хвилин. Якщо зовнішній feed недоступний або має неправильну схему, Navigator зберігає останній вбудований безпечний каталог.</p>
+            {feedUrlOverridden && (
+              <p className="feed-override-warning">
+                ⚠️ Це джерело збережено в localStorage вашого браузера й НЕ збігається з канонічним feed
+                (<code>{CANONICAL_FEED_URL}</code>). Якщо це старе тестове значення — воно може показувати застарілі дані незалежно від того, наскільки свіжий сам feed.{" "}
+                <button type="button" className="feed-reset-button" onClick={resetFeedUrlOverride}>Скинути на канонічний feed</button>
+              </p>
+            )}
           </details>
           <div className="toolbar">
             <label className="search"><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Пошук за грантом, ідеєю або дією…" aria-label="Пошук" /></label>
@@ -637,6 +780,89 @@ export default function DecisionDashboard() {
             })}
           </div>
         </section>
+
+        {reviewQueue.length > 0 && (
+          <section className="review-queue" aria-labelledby="review-title">
+            <div className="section-heading">
+              <div><p className="eyebrow">АВТОМАТИЧНЕ ВИЯВЛЕННЯ · SEDIA</p><h2 id="review-title">Черга перевірки</h2></div>
+              <span>{visibleReview.length} із {reviewQueue.length}</span>
+            </div>
+            <p className="review-disclaimer">
+              Автоматичний триаж можливостей SEDIA. Жоден запис тут не підтверджує право участі ВАГ
+              і не є управлінським рішенням GO чи PARTNER — це орієнтир для ручного перегляду.
+            </p>
+            <nav className="review-stats" aria-label="Фільтр черги перевірки">
+              <button
+                className={`review-stat partner-candidate ${reviewFilter === "PARTNER-CANDIDATE" ? "active" : ""}`}
+                onClick={() => setReviewFilter(reviewFilter === "PARTNER-CANDIDATE" ? "ALL" : "PARTNER-CANDIDATE")}
+              >
+                <strong>{reviewCounts["PARTNER-CANDIDATE"] ?? 0}</strong><span>Кандидати для партнерства</span>
+              </button>
+              <button
+                className={`review-stat verify ${reviewFilter === "VERIFY" ? "active" : ""}`}
+                onClick={() => setReviewFilter(reviewFilter === "VERIFY" ? "ALL" : "VERIFY")}
+              >
+                <strong>{reviewCounts["VERIFY"] ?? 0}</strong><span>Потребують перевірки</span>
+              </button>
+              <button
+                className={`review-stat reject ${reviewFilter === "REJECT" ? "active" : ""}`}
+                onClick={() => setReviewFilter(reviewFilter === "REJECT" ? "ALL" : "REJECT")}
+              >
+                <strong>{reviewCounts["REJECT"] ?? 0}</strong><span>Відсіяно</span>
+              </button>
+              {reviewFilter !== "ALL" && (
+                <button className="review-stat clear" onClick={() => setReviewFilter("ALL")}>
+                  <span>Показати всі</span>
+                </button>
+              )}
+            </nav>
+            <div className="review-list">
+              {visibleReview.map((record) => {
+                const budget = formatTopicBudget(record.topicBudget ?? null);
+                return (
+                  <article key={`${record.identifier}-${record.url}`} className={`review-card ${record.triage.toLowerCase()}`}>
+                    <div className="review-card-head">
+                      <span className={`triage-badge ${record.triage.toLowerCase()}`}>{triageLabels[record.triage]}</span>
+                      {record.priority && <span className="review-priority">{record.priority}</span>}
+                    </div>
+                    <h3>{record.title}</h3>
+                    <p className="review-identifier">{record.identifier}</p>
+                    {record.triageReason && <p className="review-reason">{record.triageReason}</p>}
+                    {record.matchedTerms && record.matchedTerms.length > 0 && (
+                      <div className="review-terms">{record.matchedTerms.map((term) => <span key={term}>{term}</span>)}</div>
+                    )}
+                    <dl className="review-meta">
+                      <div><dt>Дедлайн</dt><dd>{record.deadline ? new Date(record.deadline).toLocaleDateString("uk-UA") : "—"}</dd></div>
+                      <div><dt>Офіційне джерело</dt><dd>{record.officialSource ? "так" : "потребує перевірки"}</dd></div>
+                      <div><dt>Eligibility</dt><dd>{record.eligibilityVerified ? "підтверджено" : "не підтверджено"}</dd></div>
+                    </dl>
+                    {record.eligibilitySignals && record.eligibilitySignals.length > 0 && (
+                      <p className="review-signals">Сигнали (не доказ eligibility): {record.eligibilitySignals.join(", ")}</p>
+                    )}
+                    {budget ? (
+                      <div className="review-budget">
+                        {budget.perProject && (
+                          <p>
+                            <span>Орієнтовний внесок ЄС на проєкт</span>
+                            <strong>{budget.perProject}{budget.expectedGrants ? ` · ${budget.expectedGrants} проєктів` : ""}</strong>
+                          </p>
+                        )}
+                        {budget.totalLabel && (
+                          <p className="review-budget-total">
+                            <span>Загальний бюджет topic</span><strong>{budget.totalLabel}</strong>
+                          </p>
+                        )}
+                      </div>
+                    ) : (
+                      <p className="review-budget-missing">Бюджет потребує перевірки</p>
+                    )}
+                    <a href={record.url} target="_blank" rel="noreferrer">Офіційні умови <span>↗</span></a>
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+        )}
       </div>
 
       <footer><strong>ВАГ · Панель грантових рішень</strong><p>Дані — для первинного управлінського рішення. Перед поданням звіряйте повні умови конкурсу.</p></footer>

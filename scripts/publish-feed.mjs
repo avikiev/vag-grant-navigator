@@ -14,6 +14,18 @@ for (const name of ["grants.json", "catalogue-meta.json"]) {
   if (!fs.existsSync(source)) throw new Error(`Missing ${source}`);
   for (const targetDir of [publicDir, siteDir]) fs.copyFileSync(source, path.join(targetDir, name));
 }
+// Step 3.4: the review queue is optional (a run may legitimately produce
+// zero review candidates), so it is published when present but never
+// required -- unlike grants.json/catalogue-meta.json above, a missing file
+// here must not fail the whole publish step.
+const reviewQueueSource = path.join(sourceDir, "grant-review-queue.json");
+if (fs.existsSync(reviewQueueSource)) {
+  for (const targetDir of [publicDir, siteDir]) {
+    fs.copyFileSync(reviewQueueSource, path.join(targetDir, "grant-review-queue.json"));
+  }
+} else {
+  console.warn("grant-review-queue.json not found in data/ -- skipping publish for this run.");
+}
 
 const meta = JSON.parse(fs.readFileSync(path.join(sourceDir, "catalogue-meta.json"), "utf8"));
 fs.writeFileSync(path.join(siteDir, "health.json"), JSON.stringify({
