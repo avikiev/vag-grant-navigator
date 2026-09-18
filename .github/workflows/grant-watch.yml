@@ -42,8 +42,6 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run Grant Watcher
-        env:
-          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
         run: python eu_grants_watch.py
 
       - name: Evidence Gate + merge
