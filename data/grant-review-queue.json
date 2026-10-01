@@ -392,20 +392,5 @@
       ]
     },
     "source": "European Commission SEDIA Search API"
-  },
-  {
-    "identifier": "CREA-CULT-2025-COOP-UA-2",
-    "title": "Cultural Horizons: Residencies",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/14828",
-    "deadline": "2026-09-30T18:00:00.000+0000",
-    "officialSource": true,
-    "eligibilityVerified": false,
-    "eligibilitySignals": [],
-    "triage": "VERIFY",
-    "priority": "MEDIUM",
-    "triageReason": "Official source and deadline are available, but UTGA eligibility is not verified.",
-    "matchedTerms": [],
-    "topicBudget": null,
-    "source": "European Commission SEDIA Search API"
   }
 ]
