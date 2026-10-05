@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-10-04T11:07:35.663Z",
+  "runAt": "2026-10-05T12:18:01.257Z",
   "accepted": [
     {
       "id": "memory-action",
@@ -10,10 +10,6 @@
       "id": "collaboration-grants",
       "action": "updated",
       "generatedId": "culture-helps-solidarity-second-call-for-propo-688d4175"
-    },
-    {
-      "id": "cultural-horizons-artistic-debuts-b552a020",
-      "action": "updated"
     }
   ],
   "rejected": []

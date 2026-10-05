@@ -19,7 +19,7 @@
       "officialSource": true,
       "eligibilityVerified": true,
       "deadlineVerified": true,
-      "verifiedAt": "2026-10-04T11:07:35.573181+00:00",
+      "verifiedAt": "2026-10-05T12:18:01.124982+00:00",
       "evidenceUrls": [
         "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/15381"
       ],
@@ -46,36 +46,9 @@
       "officialSource": true,
       "eligibilityVerified": true,
       "deadlineVerified": true,
-      "verifiedAt": "2026-10-04T11:07:35.577345+00:00",
+      "verifiedAt": "2026-10-05T12:18:01.132599+00:00",
       "evidenceUrls": [
         "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/15523"
-      ],
-      "method": "UTGA Grant Watcher v0.3 conservative SEDIA structured verification"
-    }
-  },
-  {
-    "id": "cultural-horizons-artistic-debuts-b552a020",
-    "title": "Cultural Horizons: Artistic Debuts",
-    "organisation": "Creative Europe · European Commission",
-    "deadline": "2026-10-05T05:00:00.000+0000",
-    "deadlineLabel": "05.10.2026 · 05:00 UTC",
-    "topics": [
-      "Культура",
-      "Освіта"
-    ],
-    "amount": "див. офіційні умови",
-    "applicant": "Партнерство за участю української юридичної/громадської організації — за офіційними умовами конкурсного дзвінка",
-    "summary": "[\"Fostering Ukrainians’ access to culture and cultural heritage\"] [] [\"<p><br></p><p class=\\\"ql-align-justify\\\"><em>The ‘</em><strong><em>Cultural Horizons’ </em></strong><em>programme is designed to increase the access of Ukrainians, particularly displaced persons, to culture and cultural heritage, by supporting cultural and artistic projects developed through EU-Ukrainian partnerships. It aims to strengthen connections between the Ukrainian and EU cultural spheres and to explore mentorship as a tool for professional development.",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/15241",
-    "sediaCallccm2Id": "15241",
-    "sediaReference": "15241COMPETITIVE_CALLen",
-    "verification": {
-      "officialSource": true,
-      "eligibilityVerified": true,
-      "deadlineVerified": true,
-      "verifiedAt": "2026-10-04T11:07:35.578534+00:00",
-      "evidenceUrls": [
-        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/15241"
       ],
       "method": "UTGA Grant Watcher v0.3 conservative SEDIA structured verification"
     }
