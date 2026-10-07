@@ -144,6 +144,34 @@
     "source": "European Commission SEDIA Search API"
   },
   {
+    "identifier": "HORIZON-NEB-2027-01-PARTICIPATION-03",
+    "title": "Novel combinations of knowledge and research methods to address social issues and advance a fair green transition of neighbourhoods",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2027-01-PARTICIPATION-03",
+    "deadline": "2027-12-01T00:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [
+      "ngo"
+    ],
+    "triage": "VERIFY",
+    "priority": "MEDIUM",
+    "triageReason": "Official source and deadline are available, but UTGA eligibility is not verified.",
+    "matchedTerms": [],
+    "topicBudget": {
+      "action": "HORIZON-NEB-2027-01-PARTICIPATION-03 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+      "expectedGrants": 4,
+      "minContribution": 3500000,
+      "maxContribution": 3500000,
+      "totalTopicBudget": 14000000,
+      "plannedOpeningDate": "2027-05-05",
+      "deadlineModel": "single-stage",
+      "deadlineDates": [
+        "2027-12-01"
+      ]
+    },
+    "source": "European Commission SEDIA Search API"
+  },
+  {
     "identifier": "HORIZON-NEB-2027-01-PARTICIPATION-02",
     "title": "Intergenerational neighbourhoods and communities aligned with the New European Bauhaus",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2027-01-PARTICIPATION-02",
@@ -165,34 +193,6 @@
       "minContribution": 5250000,
       "maxContribution": 5250000,
       "totalTopicBudget": 10500000,
-      "plannedOpeningDate": "2027-05-05",
-      "deadlineModel": "single-stage",
-      "deadlineDates": [
-        "2027-12-01"
-      ]
-    },
-    "source": "European Commission SEDIA Search API"
-  },
-  {
-    "identifier": "HORIZON-NEB-2027-01-PARTICIPATION-03",
-    "title": "Novel combinations of knowledge and research methods to address social issues and advance a fair green transition of neighbourhoods",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2027-01-PARTICIPATION-03",
-    "deadline": "2027-12-01T00:00:00.000+0000",
-    "officialSource": true,
-    "eligibilityVerified": false,
-    "eligibilitySignals": [
-      "ngo"
-    ],
-    "triage": "VERIFY",
-    "priority": "MEDIUM",
-    "triageReason": "Official source and deadline are available, but UTGA eligibility is not verified.",
-    "matchedTerms": [],
-    "topicBudget": {
-      "action": "HORIZON-NEB-2027-01-PARTICIPATION-03 - HORIZON-RIA HORIZON  Research and Innovation Actions",
-      "expectedGrants": 4,
-      "minContribution": 3500000,
-      "maxContribution": 3500000,
-      "totalTopicBudget": 14000000,
       "plannedOpeningDate": "2027-05-05",
       "deadlineModel": "single-stage",
       "deadlineDates": [
@@ -264,7 +264,9 @@
     "deadline": "2027-12-01T00:00:00.000+0000",
     "officialSource": true,
     "eligibilityVerified": false,
-    "eligibilitySignals": [],
+    "eligibilitySignals": [
+      "ngo"
+    ],
     "triage": "REJECT",
     "priority": "LOW",
     "triageReason": "Low thematic relevance to UTGA detected: modular construction, construction components.",

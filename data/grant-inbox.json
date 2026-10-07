@@ -1,32 +1,5 @@
 [
   {
-    "id": "second-call-for-proposals-for-project-grants-9ebddbdd",
-    "title": "Second Call for Proposals for Project Grants",
-    "organisation": "Creative Europe · European Commission",
-    "deadline": "2026-10-06T13:00:00.000+0000",
-    "deadlineLabel": "06.10.2026 · 13:00 UTC",
-    "topics": [
-      "Культура",
-      "Освіта"
-    ],
-    "amount": "до €7,000",
-    "applicant": "Партнерство за участю української юридичної/громадської організації — за офіційними умовами конкурсного дзвінка",
-    "summary": "[\"Fostering Ukrainians’ access to culture and cultural heritage\"] [] [\"<p><strong>Culture Helps Solidarity - Open Call for Project Grants</strong></p><p><strong>Memory in Action</strong></p><p><em>Support for projects in the fields of (tactical) commemoration, historical and artistic documentation, social and non-institutional archives as cultural heritage </em></p><p><strong>Second Round, August-October, 2026</strong></p><p><br></p><p><em>Culture Helps Solidarity</em> supports arts and culture professionals from Ukraine to sustain creativity, resilience, and community connection during and after the war.",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/15381",
-    "sediaCallccm2Id": "15381",
-    "sediaReference": "15381COMPETITIVE_CALLen",
-    "verification": {
-      "officialSource": true,
-      "eligibilityVerified": true,
-      "deadlineVerified": true,
-      "verifiedAt": "2026-10-06T12:02:47.725073+00:00",
-      "evidenceUrls": [
-        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/15381"
-      ],
-      "method": "UTGA Grant Watcher v0.3 conservative SEDIA structured verification"
-    }
-  },
-  {
     "id": "culture-helps-solidarity-second-call-for-propo-688d4175",
     "title": "Culture Helps Solidarity - Second call for proposals for collaboration grants",
     "organisation": "Creative Europe · European Commission",
@@ -46,7 +19,7 @@
       "officialSource": true,
       "eligibilityVerified": true,
       "deadlineVerified": true,
-      "verifiedAt": "2026-10-06T12:02:47.730979+00:00",
+      "verifiedAt": "2026-10-07T11:48:19.267064+00:00",
       "evidenceUrls": [
         "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/15523"
       ],
