@@ -371,23 +371,6 @@
   },
   {
     "identifier": "CREA-CULT-2025-COOP-UA-2",
-    "title": "Culture Helps Solidarity - Sixth Call for Proposals for Individual Grants",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/16401",
-    "deadline": "2026-10-26T13:00:00.000+0000",
-    "officialSource": true,
-    "eligibilityVerified": false,
-    "eligibilitySignals": [],
-    "triage": "PARTNER-CANDIDATE",
-    "priority": "MEDIUM",
-    "triageReason": "Potential UTGA relevance: culture. Eligibility and consortium role still require verification.",
-    "matchedTerms": [
-      "culture"
-    ],
-    "topicBudget": null,
-    "source": "European Commission SEDIA Search API"
-  },
-  {
-    "identifier": "CREA-CULT-2025-COOP-UA-2",
     "title": "Cultural Horizons: Artistic Debuts (deadline extension)",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/16742",
     "deadline": "2026-11-01T17:00:00.000+0000",
