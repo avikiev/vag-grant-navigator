@@ -341,6 +341,23 @@
     "source": "European Commission SEDIA Search API"
   },
   {
+    "identifier": "HORIZON-CL2-2025-03-HERITAGE-01",
+    "title": "Foundations for climate-resilient cultural heritage - Assessing and managing impact and risk, dealing with damage and loss",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/17181",
+    "deadline": "2027-01-11T15:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [],
+    "triage": "PARTNER-CANDIDATE",
+    "priority": "HIGH",
+    "triageReason": "Strong UTGA thematic match: cultural heritage. Eligibility and consortium role still require verification.",
+    "matchedTerms": [
+      "cultural heritage"
+    ],
+    "topicBudget": null,
+    "source": "European Commission SEDIA Search API"
+  },
+  {
     "identifier": "HORIZON-CL2-2027-01-HERITAGE-08",
     "title": "Safeguarding & transmission of intangible cultural heritage",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2027-01-HERITAGE-08",

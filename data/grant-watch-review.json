@@ -1572,6 +1572,100 @@
     }
   },
   {
+    "title": "Foundations for climate-resilient cultural heritage - Assessing and managing impact and risk, dealing with damage and loss",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/17181",
+    "keyword": "cultural heritage",
+    "identifier": "HORIZON-CL2-2025-03-HERITAGE-01",
+    "status": "31094502",
+    "deadlines": [
+      "2027-01-11T15:00:00.000+0000",
+      "2027-06-16T15:00:00.000+0000"
+    ],
+    "metadata": {
+      "identifier": [
+        "HORIZON-CL2-2025-03-HERITAGE-01"
+      ],
+      "es_ContentType": [
+        "text/plain"
+      ],
+      "caName": [
+        "Foundations for climate-resilient cultural heritage - Assessing and managing impact and risk, dealing with damage and loss"
+      ],
+      "es_SortDate": [
+        "2026-11-04T00:00:00.000+0000"
+      ],
+      "beneficiaryAdministration": [
+        "<p>A two-step process will apply, with a mandatory submission of pre-proposals at the first step and submission of full proposals at the second step, via an Electronic Proposal Submission System (EPSS). The submission platform is available at <a href=\"https://epss.proposals.ee/rch/\" rel=\"noopener noreferrer\" target=\"_blank\">RCH EPSS</a>.</p><p>Submission and evaluation procedures are detailed in the Call Announcement available on the RCH Partnership website and on the submission platform.</p>"
+      ],
+      "deadlineDate": [
+        "2027-01-11T15:00:00.000+0000",
+        "2027-06-16T15:00:00.000+0000"
+      ],
+      "description": [
+        "<p>Proposals must address at least one (1) of the following:</p><ol><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Sub-theme 1: Risk and impact assessment and cultural heritage risk preparedness and management </li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Sub-theme 2: Managing the loss and damage of cultural heritage impacted by climate change-induced natural hazards</li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Sub-theme 3: Traditional, local and Indigenous knowledge systems and practices as resources and frameworks for societal resilience in the context of climate change</li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Sub-theme 4: Sustainable governance of the cultural heritage sector</li></ol>"
+      ],
+      "language": [
+        "en"
+      ],
+      "title": [
+        "Co-funded European partnership for Resilient Cultural Heritage"
+      ],
+      "type": [
+        "8"
+      ],
+      "url": [
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/47942210"
+      ],
+      "esST_URL": [
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/47942210"
+      ],
+      "destinationDetails": [
+        "<p>A two-step process will apply, with a mandatory submission of pre-proposals at the first step and submission of full proposals at the second step, via an Electronic Proposal Submission System (EPSS). The submission platform is available at <a href=\"https://epss.proposals.ee/rch/\" rel=\"noopener noreferrer\" target=\"_blank\">RCH EPSS</a>.</p><p>Submission and evaluation procedures are detailed in the Call Announcement available on the RCH Partnership website and on the submission platform.</p>"
+      ],
+      "callccm2Id": [
+        "17181"
+      ],
+      "DATASOURCE": [
+        "SEDIA"
+      ],
+      "REFERENCE": [
+        "17181COMPETITIVE_CALLen"
+      ],
+      "frameworkProgramme": [
+        "43108390"
+      ],
+      "startDate": [
+        "2026-11-04T00:00:00.000+0000"
+      ],
+      "deadlineModel": [
+        "multiple cut-off"
+      ],
+      "status": [
+        "31094502"
+      ]
+    },
+    "verification": {
+      "title": "Foundations for climate-resilient cultural heritage - Assessing and managing impact and risk, dealing with damage and loss",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/17181",
+      "identifier": "HORIZON-CL2-2025-03-HERITAGE-01",
+      "keyword": "cultural heritage",
+      "status": "31094502",
+      "officialSource": true,
+      "eligibilityVerified": false,
+      "deadlineVerified": true,
+      "deadlines": [
+        "2027-01-11T15:00:00.000+0000",
+        "2027-06-16T15:00:00.000+0000"
+      ],
+      "source": "European Commission SEDIA Search API",
+      "callccm2Id": "17181",
+      "verificationMode": "competitive-call-eligibility-section",
+      "eligibilityReason": "no-eligibility-section-found",
+      "matchedEligibilityExcerpt": null,
+      "reference": "17181COMPETITIVE_CALLen"
+    }
+  },
+  {
     "title": "Safeguarding & transmission of intangible cultural heritage",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2027-01-HERITAGE-08",
     "keyword": "cultural heritage",
