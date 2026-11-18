@@ -2174,5 +2174,96 @@
       ],
       "source": "European Commission SEDIA Search API"
     }
+  },
+  {
+    "title": "COLOURS External Pilots Open Call",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/17463",
+    "keyword": "cultural heritage",
+    "identifier": "HORIZON-CL2-2024-HERITAGE-ECCCH-01-05",
+    "status": "31094501",
+    "deadlines": [
+      "2027-01-27T17:00:00.000+0000"
+    ],
+    "metadata": {
+      "identifier": [
+        "HORIZON-CL2-2024-HERITAGE-ECCCH-01-05"
+      ],
+      "es_ContentType": [
+        "text/plain"
+      ],
+      "caName": [
+        "COLOURS External Pilots Open Call"
+      ],
+      "es_SortDate": [
+        "2026-11-26T00:00:00.000+0000"
+      ],
+      "beneficiaryAdministration": [
+        "<p>Applications may be submitted only via<a href=\"https://opportunities.getonepass.eu/open-opportunities/colours/opencall\" rel=\"noopener noreferrer\" target=\"_blank\"> </a><u><a href=\"https://opportunities.getonepass.eu/open-opportunities/colours/opencall\" rel=\"noopener noreferrer\" target=\"_blank\">FundingBox Platform</a></u>.  See <a href=\"https://opportunities.getonepass.eu/open-opportunities/colours\" rel=\"noopener noreferrer\" target=\"_blank\">Terms & Conditions</a>. </p><p>Selection follows a 6-step process:  </p><ol><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Eligibility check  </li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Pre-scoring (optional)  </li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Independent Individual Evaluation based on criteria described in Terms &amp; Conditions  </li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Online interview for top-scoring applicants  </li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Selection Consensus Meeting to select finalists, based on evaluation, interview, and COLOURS project goals </li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Legal and ethical review of pre-selected projects prior to Sub-Grant Agreement signature  </li></ol><p><br></p>"
+      ],
+      "deadlineDate": [
+        "2027-01-27T17:00:00.000+0000"
+      ],
+      "description": [
+        "<p>COLOURS External Pilots Open Call will select up to 10 projects to use advanced digital tools for color-sensitive artefact restoration.  </p><p>Funding up to €60k (single entities) or €100k (consortia, max €60k/partner) as a lump sum, with technical mentoring over 3 stages of up to 9 months:  </p><p>Stage 1 (Planning, up to 1 month, 10% grant up to €10k),  </p><p>Stage 2 (Preparation, up to 4 months, 45% grant up to €45k),  </p><p>Stage 3 (Testing & Reporting, up to 4 months, 45% grant up to €45k). </p><p><br></p>"
+      ],
+      "language": [
+        "en"
+      ],
+      "title": [
+        "A European Collaborative Cloud for Cultural Heritage – Innovative tools for the study, conservation and restoration of heritage objects"
+      ],
+      "type": [
+        "8"
+      ],
+      "url": [
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/46906387"
+      ],
+      "esST_URL": [
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/46906387"
+      ],
+      "destinationDetails": [
+        "<p>Applications may be submitted only via<a href=\"https://opportunities.getonepass.eu/open-opportunities/colours/opencall\" rel=\"noopener noreferrer\" target=\"_blank\"> </a><u><a href=\"https://opportunities.getonepass.eu/open-opportunities/colours/opencall\" rel=\"noopener noreferrer\" target=\"_blank\">FundingBox Platform</a></u>.  See <a href=\"https://opportunities.getonepass.eu/open-opportunities/colours\" rel=\"noopener noreferrer\" target=\"_blank\">Terms & Conditions</a>. </p><p>Selection follows a 6-step process:  </p><ol><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Eligibility check  </li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Pre-scoring (optional)  </li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Independent Individual Evaluation based on criteria described in Terms &amp; Conditions  </li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Online interview for top-scoring applicants  </li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Selection Consensus Meeting to select finalists, based on evaluation, interview, and COLOURS project goals </li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Legal and ethical review of pre-selected projects prior to Sub-Grant Agreement signature  </li></ol><p><br></p>"
+      ],
+      "callccm2Id": [
+        "17463"
+      ],
+      "DATASOURCE": [
+        "SEDIA"
+      ],
+      "REFERENCE": [
+        "17463COMPETITIVE_CALLen"
+      ],
+      "frameworkProgramme": [
+        "43108390"
+      ],
+      "startDate": [
+        "2026-11-26T00:00:00.000+0000"
+      ],
+      "deadlineModel": [
+        "single-stage"
+      ],
+      "status": [
+        "31094501"
+      ]
+    },
+    "verification": {
+      "title": "COLOURS External Pilots Open Call",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/17463",
+      "identifier": "HORIZON-CL2-2024-HERITAGE-ECCCH-01-05",
+      "keyword": "cultural heritage",
+      "status": "31094501",
+      "officialSource": true,
+      "eligibilityVerified": false,
+      "deadlineVerified": true,
+      "deadlines": [
+        "2027-01-27T17:00:00.000+0000"
+      ],
+      "source": "European Commission SEDIA Search API",
+      "callccm2Id": "17463",
+      "verificationMode": "competitive-call-eligibility-section",
+      "eligibilityReason": "ambiguous-no-explicit-qualifying-phrase",
+      "matchedEligibilityExcerpt": null,
+      "reference": "17463COMPETITIVE_CALLen"
+    }
   }
 ]

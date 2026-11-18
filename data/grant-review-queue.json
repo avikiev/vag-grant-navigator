@@ -426,5 +426,20 @@
       ]
     },
     "source": "European Commission SEDIA Search API"
+  },
+  {
+    "identifier": "HORIZON-CL2-2024-HERITAGE-ECCCH-01-05",
+    "title": "COLOURS External Pilots Open Call",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/17463",
+    "deadline": "2027-01-27T17:00:00.000+0000",
+    "officialSource": true,
+    "eligibilityVerified": false,
+    "eligibilitySignals": [],
+    "triage": "VERIFY",
+    "priority": "MEDIUM",
+    "triageReason": "Official source and deadline are available, but UTGA eligibility is not verified.",
+    "matchedTerms": [],
+    "topicBudget": null,
+    "source": "European Commission SEDIA Search API"
   }
 ]
